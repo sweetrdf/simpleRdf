@@ -34,6 +34,7 @@ use rdfInterface\Literal as iLiteral;
 use rdfInterface\DefaultGraph as iDefaultGraph;
 use rdfInterface\Quad as iQuad;
 use rdfInterface\QuadTemplate as iQuadTemplate;
+use rdfHelpers\DefaultGraph;
 
 /**
  * Description of DataFactory
@@ -50,8 +51,8 @@ class DataFactory implements \rdfInterface\DataFactory {
         return new NamedNode($iri);
     }
 
-    public static function defaultGraph(string | Stringable | null $iri = null): iDefaultGraph {
-        return new DefaultGraph($iri);
+    public static function defaultGraph(): iDefaultGraph {
+        return new DefaultGraph();
     }
 
     public static function literal(
@@ -64,7 +65,7 @@ class DataFactory implements \rdfInterface\DataFactory {
 
     public static function quad(
         iTerm $subject, iNamedNode $predicate, iTerm $object,
-        iNamedNode | iBlankNode | null $graphIri = null
+        iNamedNode | iBlankNode | iDefaultGraph | null $graphIri = null
     ): iQuad {
         return new Quad(clone $subject, clone $predicate, clone $object, $graphIri);
     }
@@ -72,7 +73,7 @@ class DataFactory implements \rdfInterface\DataFactory {
     public static function quadTemplate(
         iTerm | null $subject = null, iNamedNode | null $predicate = null,
         iTerm | null $object = null,
-        iNamedNode | iBlankNode | null $graphIri = null
+        iNamedNode | iBlankNode | iDefaultGraph | null $graphIri = null
     ): iQuadTemplate {
         return new QuadTemplate($subject, $predicate, $object, $graphIri);
     }

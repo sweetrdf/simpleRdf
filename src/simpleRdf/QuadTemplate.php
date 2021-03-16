@@ -30,6 +30,7 @@ use BadMethodCallException;
 use rdfInterface\NamedNode as iNamedNode;
 use rdfInterface\BlankNode as iBlankNode;
 use rdfInterface\Literal as iLiteral;
+use rdfInterface\DefaultGraph as iDefaultGraph;
 use rdfInterface\Term as iTerm;
 use rdfInterface\Quad as iQuad;
 use rdfInterface\QuadTemplate as iQuadTemplate;
@@ -54,22 +55,14 @@ class QuadTemplate implements iQuadTemplate {
      */
     private iNamedNode | null $predicate;
 
-    /**
-     *
-     * @var iTerm|null
-     */
     private iTerm | null $object;
 
-    /**
-     *
-     * @var iNamedNode|iBlankNode|null
-     */
     private iNamedNode | iBlankNode | null $graphIri;
 
     public function __construct(
         iTerm | null $subject = null, iNamedNode | null $predicate = null,
         iTerm | null $object = null,
-        iNamedNode | iBlankNode | null $graphIri = null
+        iNamedNode | iBlankNode | iDefaultGraph | null $graphIri = null
     ) {
         if ($subject === null && $predicate === null && $object === null && $graphIri === null) {
             throw new BadMethodCallException("At least one part of the quad has to be specified");
@@ -77,8 +70,7 @@ class QuadTemplate implements iQuadTemplate {
         if ($subject instanceof iLiteral) {
             throw new BadMethodCallException("subject can't be a literal");
         }
-        if ($graphIri instanceof iBlankNode) {
-            // all triples belong to the default graph, so nothing to search for
+        if ($graphIri instanceof iDefaultGraph) {
             $graphIri = null;
         }
         $this->subject   = $subject;
@@ -148,7 +140,7 @@ class QuadTemplate implements iQuadTemplate {
         return DF::quadTemplate($this->subject, $this->predicate, $object, $this->graphIri);
     }
 
-    public function withGraphIri(\rdfInterface\NamedNode | \rdfInterface\BlankNode | null $graphIri): iQuadTemplate {
+    public function withGraphIri(iNamedNode | iBlankNode | iDefaultGraph | null $graphIri): iQuadTemplate {
         return DF::quadTemplate($this->subject, $this->predicate, $this->object, $graphIri);
     }
 }
