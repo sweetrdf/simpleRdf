@@ -40,4 +40,8 @@ trait TestTrait {
     public static function getDataset(): \rdfInterface\Dataset {
         return new Dataset();
     }
+
+    public static function getRdfNamespace(): \rdfInterface\RdfNamespace {
+        return new RdfNamespace();
+    }
 }

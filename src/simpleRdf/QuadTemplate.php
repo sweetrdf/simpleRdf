@@ -30,7 +30,6 @@ use BadMethodCallException;
 use rdfInterface\NamedNode as iNamedNode;
 use rdfInterface\BlankNode as iBlankNode;
 use rdfInterface\Literal as iLiteral;
-use rdfInterface\DefaultGraph as iDefaultGraph;
 use rdfInterface\Term as iTerm;
 use rdfInterface\Quad as iQuad;
 use rdfInterface\QuadTemplate as iQuadTemplate;
@@ -78,7 +77,7 @@ class QuadTemplate implements iQuadTemplate {
         if ($subject instanceof iLiteral) {
             throw new BadMethodCallException("subject can't be a literal");
         }
-        if ($graphIri instanceof iDefaultGraph) {
+        if ($graphIri instanceof iBlankNode) {
             // all triples belong to the default graph, so nothing to search for
             $graphIri = null;
         }
@@ -98,11 +97,15 @@ class QuadTemplate implements iQuadTemplate {
 
     public function equals(\rdfInterface\Term $term): bool {
         if ($term instanceof iQuadTemplate) {
+            $tsbj   = $term->getSubject();
+            $tpred  = $term->getPredicate();
+            $tobj   = $term->getObject();
+            $tgraph = $term->getGraphIri();
             /* @var $term iQuadTemplate */
-            return ($this->subject === null && $term->getSubject() === null || $this->subject !== null && $this->subject->equals($term)) &&
-                ($this->predicate === null && $term->getPredicate() === null || $this->predicate !== null && $this->predicate->equals($term)) &&
-                ($this->object === null && $term->getObject() === null || $this->object !== null && $this->object->equals($term)) &&
-                ($this->graphIri === null && $term->getGraphIri() === null || $this->graphIri !== null && $this->graphIri->equals($term));
+            return ($this->subject === $tsbj || $this->subject !== null && $tsbj !== null && $this->subject->equals($tsbj)) &&
+                ($this->predicate === $tpred || $this->predicate !== null && $tpred !== null && $this->predicate->equals($tpred)) &&
+                ($this->object === $tobj || $this->object !== null && $tobj !== null && $this->object->equals($tobj)) &&
+                ($this->graphIri === $tgraph || $this->graphIri !== null && $tgraph !== null && $this->graphIri->equals($tgraph));
         } else if ($term instanceof iQuad) {
             /* @var $term iQuad */
             return ($this->subject === null || $this->subject->equals($term->getSubject())) &&

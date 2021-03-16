@@ -27,20 +27,11 @@
 namespace simpleRdf;
 
 /**
- * Description of LoggerTest
+ * Description of TermsTest
  *
  * @author zozlak
  */
-class DataFactoryTest extends \rdfInterface\tests\DataFactoryTest {
+class TermsTest extends \rdfInterface\tests\TermsTest {
 
     use TestTrait;
-    
-    /**
-     * 
-     * @return void
-     */
-    public function testCreateVariable(): void {
-        $this->expectException(RdfException::class);
-        parent::testCreateVariable();
-    }
 }

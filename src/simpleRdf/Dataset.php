@@ -36,7 +36,6 @@ use rdfInterface\QuadIterator as iQuadIterator;
 use rdfInterface\Dataset as iDataset;
 use rdfInterface\DatasetMapReduce as iDatasetMapReduce;
 use rdfInterface\DatasetCompare as iDatasetCompare;
-use rdfHelpers\GenericQuadIterator;
 
 /**
  * Description of Graph

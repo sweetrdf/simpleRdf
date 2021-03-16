@@ -27,11 +27,9 @@
 namespace simpleRdf;
 
 /**
- * Description of RdfException
  *
  * @author zozlak
  */
-class RdfException extends \Exception
-{
-    //put your code here
+class RdfException extends \Exception {
+    
 }
