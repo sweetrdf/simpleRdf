@@ -9,11 +9,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: composer
       run: composer update
-#    - uses: actions/cache@v2
-#      with: 
-#        path: vendor
-#        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-#        restore-keys: ${{ runner.os }}-composer-
+    - uses: actions/cache@v2
+      with: 
+        path: vendor
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        restore-keys: ${{ runner.os }}-composer-
     - name: phpunit
       run: XDEBUG_MODE=coverage vendor/bin/phpunit
     - name: coveralls
