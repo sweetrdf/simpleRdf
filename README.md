@@ -19,7 +19,7 @@ It can be used as a baseline for testing performance of other libraries as well 
 
 ## Usage
 
-```
+```php
 include 'vendor/autoload.php';
 
 use simpleRdf\DataFactory as DF;
