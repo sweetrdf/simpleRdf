@@ -26,8 +26,6 @@
 
 namespace simpleRdf;
 
-use OutOfBoundsException;
-use BadMethodCallException;
 use rdfInterface\NamedNode;
 use simpleRdf\DataFactory as DF;
 
@@ -36,71 +34,9 @@ use simpleRdf\DataFactory as DF;
  *
  * @author zozlak
  */
-class RdfNamespace implements \rdfInterface\RdfNamespace {
+class RdfNamespace extends \rdfHelpers\RdfNamespace {
 
-    private int $n = 0;
-
-    /**
-     *
-     * @var array<string, string>
-     */
-    private array $namespaces = [];
-
-    public function add(string $iriPrefix, ?string $shortName = null): string {
-        if (empty($shortName)) {
-            $shortName = 'n' . $this->n;
-            $this->n++;
-        }
-        $this->namespaces[$shortName] = $iriPrefix;
-        return $shortName;
-    }
-
-    public function remove(string $shortName): void {
-        unset($this->namespaces[$shortName]);
-    }
-
-    public function get(string $shortName): string {
-        if (isset($this->namespaces[$shortName])) {
-            return $this->namespaces[$shortName];
-        }
-        throw new OutOfBoundsException('Unknown prefix');
-    }
-
-    public function getAll(): array {
-        return $this->namespaces;
-    }
-
-    public function expand(string $shortIri): NamedNode {
-        $pos = strpos($shortIri, ':');
-        if ($pos === false) {
-            throw new BadMethodCallException("parameter is not a shortened IRI");
-        }
-        $alias = substr($shortIri, 0, $pos);
-        if (isset($this->namespaces[$alias])) {
-            return DF::namedNode($this->namespaces[$alias] . substr($shortIri, $pos + 1));
-        }
-        throw new OutOfBoundsException('Unknown alias');
-    }
-
-    public function shorten(NamedNode $iri, bool $create): string {
-        $iri = (string) $iri->getValue();
-        $n   = strlen($iri);
-        $p   = max(strrpos($iri, '/'), strrpos($iri, '#'));
-        if ($p + 1 >= $n) {
-            $iritmp = substr($iri, 0, $n - 1);
-            $p      = max(strrpos($iritmp, '/'), strrpos($iritmp, '#'));
-        }
-        $prefix    = substr($iri, 0, $p + 1);
-        $shortName = array_search($prefix, $this->namespaces);
-        if ($shortName === false) {
-            if ($create) {
-                $shortName                    = "n" . $this->n;
-                $this->n++;
-                $this->namespaces[$shortName] = $prefix;
-            } else {
-                throw new OutOfBoundsException("Iri doesn't match any registered prefix");
-            }
-        }
-        return $shortName . ':' . substr($iri, $p + 1);
+    protected function getNamedNode(string $iri): NamedNode {
+        return DF::namedNode($iri);
     }
 }
