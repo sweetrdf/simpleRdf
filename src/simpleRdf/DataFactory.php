@@ -27,7 +27,6 @@
 namespace simpleRdf;
 
 use Stringable;
-use zozlak\RdfConstants as RDF;
 use rdfInterface\Term as iTerm;
 use rdfInterface\BlankNode as iBlankNode;
 use rdfInterface\NamedNode as iNamedNode;
@@ -67,7 +66,7 @@ class DataFactory implements \rdfInterface\DataFactory {
         iTerm $subject, iNamedNode $predicate, iTerm $object,
         iNamedNode | iBlankNode | null $graphIri = null
     ): iQuad {
-        return new Quad($subject, $predicate, $object, $graphIri);
+        return new Quad(clone $subject, clone $predicate, clone $object, $graphIri);
     }
 
     public static function quadTemplate(

@@ -28,6 +28,7 @@ namespace simpleRdf;
 
 use Stringable;
 use zozlak\RdfConstants as RDF;
+use rdfInterface\Literal as iLiteral;
 use simpleRdf\DataFactory as DF;
 
 /**
@@ -94,10 +95,13 @@ class Literal implements \rdfInterface\Literal {
     }
 
     public function equals(\rdfInterface\Term $term): bool {
-        return $this->getType() === $term->getType() &&
-            $this->getValue() === $term->getValue() &&
-            $this->getLang() === $term->getLang() &&
-            $this->getDatatype() === $term->getDatatype();
+        if ($term instanceof iLiteral) {
+            return $this->getValue() === $term->getValue() &&
+                $this->getLang() === $term->getLang() &&
+                $this->getDatatype() === $term->getDatatype();
+        } else {
+            return false;
+        }
     }
 
     public function withValue(int | float | string | bool | Stringable $value): \rdfInterface\Literal {

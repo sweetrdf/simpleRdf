@@ -30,7 +30,11 @@ namespace simpleRdf;
  *
  * @author zozlak
  */
-class DatasetTest extends \rdfInterface\tests\DatasetTest {
+class DatasetCompareTest extends \rdfInterface\tests\DatasetCompareTest {
 
     use TestTrait;
+
+    public static function getDataset(): \rdfInterface\DatasetCompare {
+        return new Dataset();
+    }
 }

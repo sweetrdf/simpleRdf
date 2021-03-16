@@ -30,7 +30,11 @@ namespace simpleRdf;
  *
  * @author zozlak
  */
-class DatasetTest extends \rdfInterface\tests\DatasetTest {
+class DatasetMapReduceTest extends \rdfInterface\tests\DatasetMapReduceTest {
 
     use TestTrait;
+
+    public static function getDataset(): \rdfInterface\DatasetMapReduce {
+        return new Dataset();
+    }
 }

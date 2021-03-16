@@ -87,14 +87,15 @@ class Quad implements iQuad {
     }
 
     public function equals(iTerm $term): bool {
-        if ($term->getType() !== $this->getType()) {
+        if ($term instanceof iQuad) {
+            /* @var $term iQuad */
+            return $this->subject->equals($term->getSubject()) &&
+                $this->predicate->equals($term->getPredicate()) &&
+                $this->object->equals($term->getObject()) &&
+                $this->graphIri->equals($term->getGraphIri());
+        } else {
             return false;
         }
-        /* @var $term iQuad */
-        return $this->subject->equals($term->getSubject()) &&
-            $this->predicate->equals($term->getPredicate()) &&
-            $this->object->equals($term->getObject()) &&
-            $this->graphIri->equals($term->getGraphIri());
     }
 
     public function getValue(): string {

@@ -98,11 +98,11 @@ class QuadTemplate implements iQuadTemplate {
 
     public function equals(\rdfInterface\Term $term): bool {
         if ($term instanceof iQuadTemplate) {
-            /* @var $term iQuad */
-            return ($this->subject === null && $term->getSubject() === null || $this->subject->equals($term)) &&
-                ($this->predicate === null && $term->getPredicate() === null || $this->predicate->equals($term)) &&
-                ($this->object === null && $term->getObject() === null || $this->object->equals($term)) &&
-                ($this->graphIri === null && $term->getGraphIri() === null || $this->graphIri->equals($term));
+            /* @var $term iQuadTemplate */
+            return ($this->subject === null && $term->getSubject() === null || $this->subject !== null && $this->subject->equals($term)) &&
+                ($this->predicate === null && $term->getPredicate() === null || $this->predicate !== null && $this->predicate->equals($term)) &&
+                ($this->object === null && $term->getObject() === null || $this->object !== null && $this->object->equals($term)) &&
+                ($this->graphIri === null && $term->getGraphIri() === null || $this->graphIri !== null && $this->graphIri->equals($term));
         } else if ($term instanceof iQuad) {
             /* @var $term iQuad */
             return ($this->subject === null || $this->subject->equals($term->getSubject())) &&

@@ -27,10 +27,17 @@
 namespace simpleRdf;
 
 /**
+ * Description of TestTrait
  *
  * @author zozlak
  */
-class DatasetTest extends \rdfInterface\tests\DatasetTest {
+trait TestTrait {
 
-    use TestTrait;
+    public static function getDataFactory(): \rdfInterface\DataFactory {
+        return new DataFactory();
+    }
+
+    public static function getDataset(): \rdfInterface\Dataset {
+        return new Dataset();
+    }
 }
