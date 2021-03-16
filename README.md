@@ -9,7 +9,7 @@ An RDF library for PHP implementing the https://github.com/sweetrdf/rdfInterface
 
 The aim was to provide as simple, short and clear implementation as possible. Performance wasn't really important.
 
-It can be used as a baseline for testing performance of other libraries as well for testing interoperability of the rdfInterface implementations (do they work correctly with `rdfInterface\Term` objects created by other library).
+It can be used as a baseline for testing performance of other libraries as well for testing interoperability of the rdfInterface implementations (e.g. making sure they work correctly with `rdfInterface\Term` objects created by other library).
 
 ## Installation
 
