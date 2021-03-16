@@ -54,9 +54,7 @@ class QuadTemplate implements iQuadTemplate {
      * @var iNamedNode|null
      */
     private iNamedNode | null $predicate;
-
     private iTerm | null $object;
-
     private iNamedNode | iBlankNode | null $graphIri;
 
     public function __construct(
@@ -87,7 +85,7 @@ class QuadTemplate implements iQuadTemplate {
         return \rdfInterface\TYPE_QUAD_TMPL;
     }
 
-    public function equals(\rdfInterface\Term $term): bool {
+    public function equals(iTerm $term): bool {
         if ($term instanceof iQuadTemplate) {
             $tsbj   = $term->getSubject();
             $tpred  = $term->getPredicate();
