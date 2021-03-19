@@ -81,10 +81,6 @@ class QuadTemplate implements iQuadTemplate {
         return rtrim("$this->subject $this->predicate $this->object $this->graphIri");
     }
 
-    public function getType(): string {
-        return \rdfInterface\TYPE_QUAD_TMPL;
-    }
-
     public function equals(iTerm $term): bool {
         if ($term instanceof iQuadTemplate) {
             $tsbj   = $term->getSubject();

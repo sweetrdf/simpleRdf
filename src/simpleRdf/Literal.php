@@ -26,9 +26,11 @@
 
 namespace simpleRdf;
 
+use BadMethodCallException;
 use Stringable;
 use zozlak\RdfConstants as RDF;
 use rdfInterface\Literal as iLiteral;
+use rdfInterface\Term as iTerm;
 use simpleRdf\DataFactory as DF;
 
 /**
@@ -52,7 +54,7 @@ class Literal implements \rdfInterface\Literal {
 
     /**
      *
-     * @var string|null
+     * @var string
      */
     private $datatype;
 
@@ -60,26 +62,49 @@ class Literal implements \rdfInterface\Literal {
         int | float | string | bool | Stringable $value, ?string $lang = null,
         ?string $datatype = null
     ) {
-        $lang     = empty($lang) ? null : $lang;
-        $datatype = empty($datatype) ? RDF::XSD_STRING : $datatype;
-
-        $this->value    = $value;
-        $this->lang     = $lang;
-        $this->datatype = $datatype;
+        if (!empty($lang)) {
+            $this->lang     = $lang;
+            $this->datatype = RDF::RDF_LANG_STRING;
+        } else if (empty($datatype)) {
+            switch (gettype($value)) {
+                case 'integer':
+                    $this->datatype = RDF::XSD_INTEGER;
+                    break;
+                case 'double':
+                    $this->datatype = RDF::XSD_DECIMAL;
+                    break;
+                case 'boolean':
+                    $this->datatype = RDF::XSD_BOOLEAN;
+                    $value          = (int) $value;
+                    break;
+                default:
+                    $this->datatype = RDF::XSD_STRING;
+            }
+        } else {
+            $this->datatype = $datatype;
+        }
+        $this->value = $value;
     }
 
     public function __toString(): string {
         $langtype = '';
         if (!empty($this->lang)) {
             $langtype = "@" . $this->lang;
-        } elseif (!empty($this->datatype)) {
+        } elseif ($this->datatype !== RDF::XSD_STRING) {
             $langtype = "^^<$this->datatype>";
         }
         return '"' . $this->value . '"' . $langtype;
     }
 
-    public function getValue(): int | float | string | bool | Stringable {
-        return $this->value;
+    public function getValue(int $cast = self::CAST_LEXICAL_FORM): mixed {
+        switch ($cast) {
+            case self::CAST_LEXICAL_FORM:
+                return (string) $this->value;
+            case self::CAST_NONE:
+                return $this->value;
+            default:
+                throw new BadMethodCallException("Unsupported cast requested");
+        }
     }
 
     public function getLang(): ?string {
@@ -87,16 +112,12 @@ class Literal implements \rdfInterface\Literal {
     }
 
     public function getDatatype(): string {
-        return $this->datatype ?? RDF::XSD_STRING;
+        return $this->datatype;
     }
 
-    public function getType(): string {
-        return \rdfInterface\TYPE_LITERAL;
-    }
-
-    public function equals(\rdfInterface\Term $term): bool {
+    public function equals(iTerm $term): bool {
         if ($term instanceof iLiteral) {
-            return $this->getValue() === $term->getValue() &&
+            return $this->getValue(self::CAST_LEXICAL_FORM) === $term->getValue(self::CAST_LEXICAL_FORM) &&
                 $this->getLang() === $term->getLang() &&
                 $this->getDatatype() === $term->getDatatype();
         } else {
@@ -105,17 +126,29 @@ class Literal implements \rdfInterface\Literal {
     }
 
     public function withValue(int | float | string | bool | Stringable $value): \rdfInterface\Literal {
-        return DF::literal($value, $this->lang, $this->datatype);
+        $lang     = $datatype = null;
+        if (is_string($value) || $value instanceof Stringable) {
+            $lang     = $this->lang;
+            $datatype = $this->datatype;
+        }
+        return DF::literal($value, $lang, $datatype);
     }
 
     public function withLang(?string $lang): \rdfInterface\Literal {
-        $datatype = empty($lang) ? $this->datatype : RDF::XSD_STRING;
+        $hadLang = $this->lang !== null;
+        $hasLang = !empty($lang);
+        if ($hadLang !== $hasLang) {
+            $datatype = $hasLang ? RDF::RDF_LANG_STRING : RDF::XSD_STRING;
+        } else {
+            $datatype = $this->datatype;
+        }
         return DF::literal($this->value, $lang, $datatype);
     }
 
-    public function withDatatype(?string $datatype): \rdfInterface\Literal {
-        $datatype = empty($datatype) ? RDF::XSD_STRING : $datatype;
-        $lang     = $datatype === RDF::XSD_STRING ? $this->lang : null;
-        return DF::literal($this->value, $lang, $datatype);
+    public function withDatatype(string $datatype): \rdfInterface\Literal {
+        if (empty($datatype) || $datatype === RDF::RDF_LANG_STRING) {
+            throw new BadMethodCallException("Datatype can't be empty nor rdf:langString");
+        }
+        return DF::literal($this->value, null, $datatype);
     }
 }

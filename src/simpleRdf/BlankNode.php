@@ -26,6 +26,9 @@
 
 namespace simpleRdf;
 
+use rdfInterface\BlankNode as iBlankNode;
+use rdfInterface\Term as iTerm;
+
 /**
  * Description of BlankNode
  *
@@ -56,12 +59,8 @@ class BlankNode implements \rdfInterface\BlankNode {
         return $this->id;
     }
 
-    public function equals(\rdfInterface\Term $term): bool {
-        return $this->getType() === $term->getType() && $this->getValue() == $term->getValue();
-    }
-
-    public function getType(): string {
-        return \rdfInterface\TYPE_BLANK_NODE;
+    public function equals(iTerm $term): bool {
+        return $term instanceof iBlankNode && $this->getValue() == $term->getValue();
     }
 
     public function getValue(): string {

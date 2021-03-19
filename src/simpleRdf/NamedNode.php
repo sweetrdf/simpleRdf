@@ -26,6 +26,9 @@
 
 namespace simpleRdf;
 
+use rdfInterface\NamedNode as iNamedNode;
+use rdfInterface\Term as iTerm;
+
 /**
  * Description of Iri
  *
@@ -51,11 +54,7 @@ class NamedNode implements \rdfInterface\NamedNode {
         return $this->iri;
     }
 
-    public function getType(): string {
-        return \rdfInterface\TYPE_NAMED_NODE;
-    }
-
-    public function equals(\rdfInterface\Term $term): bool {
-        return $this->getType() === $term->getType() && $this->getValue() === $term->getValue();
+    public function equals(iTerm $term): bool {
+        return $term instanceof iNamedNode && $this->getValue() === $term->getValue();
     }
 }

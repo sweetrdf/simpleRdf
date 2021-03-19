@@ -64,10 +64,6 @@ class Quad implements iQuad {
         return rtrim("$this->subject $this->predicate $this->object $this->graphIri");
     }
 
-    public function getType(): string {
-        return \rdfInterface\TYPE_QUAD;
-    }
-
     public function equals(iTerm $term): bool {
         if ($term instanceof iQuad) {
             /* @var $term iQuad */
