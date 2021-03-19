@@ -75,7 +75,7 @@ class Literal implements \rdfInterface\Literal {
                     break;
                 case 'boolean':
                     $this->datatype = RDF::XSD_BOOLEAN;
-                    $value          = (int) $value;
+                    $value          = (int) ((string) $value);
                     break;
                 default:
                     $this->datatype = RDF::XSD_STRING;
@@ -100,8 +100,6 @@ class Literal implements \rdfInterface\Literal {
         switch ($cast) {
             case self::CAST_LEXICAL_FORM:
                 return (string) $this->value;
-            case self::CAST_NONE:
-                return $this->value;
             default:
                 throw new BadMethodCallException("Unsupported cast requested");
         }
