@@ -17,6 +17,13 @@ It can be used as a baseline for testing performance of other libraries as well 
 * Run `composer require sweetrdf/simple-rdf`
 * Run `composer require sweetrdf/quick-rdf-io` to install parsers and serializers.
 
+## Automatically generated documentation
+
+https://sweetrdf.github.io/simpleRdf/
+
+It's very incomplite but better than nothing.\
+[RdfInterface](https://github.com/sweetrdf/rdfInterface/) documentation is included which explains the most important design decisions.
+
 ## Usage
 
 ```php
