@@ -61,7 +61,17 @@ class Quad implements iQuad {
     }
 
     public function __toString(): string {
-        return rtrim("$this->subject $this->predicate $this->object $this->graphIri");
+        $sbj   = (string) $this->subject;
+        $pred  = (string) $this->predicate;
+        $obj   = (string) $this->object;
+        $graph = $this->graphIri instanceof iDefaultGraph ? '' : (string) $this->graphIri;
+        if ($this->subject instanceof iQuad) {
+            $sbj = "<< $sbj >>";
+        }
+        if ($this->object instanceof iQuad) {
+            $obj = "<< $obj >>";
+        }
+        return rtrim("$sbj $pred $obj $graph");
     }
 
     public function equals(iTerm $term): bool {
