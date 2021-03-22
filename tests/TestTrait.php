@@ -26,6 +26,8 @@
 
 namespace simpleRdf;
 
+use rdfInterface\TermCompare;
+
 /**
  * Description of TestTrait
  *
@@ -41,13 +43,19 @@ trait TestTrait {
         return new DataFactory();
     }
 
-    
     public static function getDataset(): \rdfInterface\Dataset {
         return new Dataset();
     }
 
     public static function getForeignDataset(): \rdfInterface\Dataset {
         return new Dataset();
+    }
+
+    public static function getQuadTemplate(TermCompare | null $subject = null,
+                                           TermCompare | null $predicate = null,
+                                           TermCompare | null $object = null,
+                                           TermCompare | null $graphIri = null): \rdfInterface\QuadCompare {
+        return new \termTemplates\QuadTemplate($subject, $predicate, $object, $graphIri);
     }
 
     public static function getRdfNamespace(): \rdfInterface\RdfNamespace {

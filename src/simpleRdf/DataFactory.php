@@ -33,7 +33,6 @@ use rdfInterface\NamedNode as iNamedNode;
 use rdfInterface\Literal as iLiteral;
 use rdfInterface\DefaultGraph as iDefaultGraph;
 use rdfInterface\Quad as iQuad;
-use rdfInterface\QuadTemplate as iQuadTemplate;
 use rdfHelpers\DefaultGraph;
 
 /**
@@ -68,17 +67,5 @@ class DataFactory implements \rdfInterface\DataFactory {
         iNamedNode | iBlankNode | iDefaultGraph | null $graphIri = null
     ): iQuad {
         return new Quad(clone $subject, clone $predicate, clone $object, $graphIri);
-    }
-
-    public static function quadTemplate(
-        iTerm | null $subject = null, iNamedNode | null $predicate = null,
-        iTerm | null $object = null,
-        iNamedNode | iBlankNode | iDefaultGraph | null $graphIri = null
-    ): iQuadTemplate {
-        return new QuadTemplate($subject, $predicate, $object, $graphIri);
-    }
-
-    public static function variable(string | Stringable $name): \rdfInterface\Variable {
-        throw new RdfException('Variables are not implemented');
     }
 }
