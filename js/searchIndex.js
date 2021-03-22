@@ -376,10 +376,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/simpleRdf-Quad.html#method_getObject"
         },                {
-            "fqsen": "\\simpleRdf\\Quad\u003A\u003AgetGraphIri\u0028\u0029",
-            "name": "getGraphIri",
+            "fqsen": "\\simpleRdf\\Quad\u003A\u003AgetGraph\u0028\u0029",
+            "name": "getGraph",
             "summary": "Null\u0020is\u0020not\u0020allowed\u0020to\u0020deal\u0020with\u0020the\u0020ambiguity\u0020between\u0020DefaultGraph\u0020and\nnull\u0020which\u0020mean\u0020the\u0020same\u0020\u0028although\u0020it\u0020should\u0020be\u0020noted\u0020that\u0020all\u0020quads\u0020in\nNamedNode\/BlankNode\u0020graphs\u0020also\u0020belong\u0020to\u0020the\u0020DefaultGraph\u0029.",
-            "url": "classes/simpleRdf-Quad.html#method_getGraphIri"
+            "url": "classes/simpleRdf-Quad.html#method_getGraph"
         },                {
             "fqsen": "\\simpleRdf\\Quad\u003A\u003AwithSubject\u0028\u0029",
             "name": "withSubject",
@@ -396,10 +396,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/simpleRdf-Quad.html#method_withObject"
         },                {
-            "fqsen": "\\simpleRdf\\Quad\u003A\u003AwithGraphIri\u0028\u0029",
-            "name": "withGraphIri",
+            "fqsen": "\\simpleRdf\\Quad\u003A\u003AwithGraph\u0028\u0029",
+            "name": "withGraph",
             "summary": "",
-            "url": "classes/simpleRdf-Quad.html#method_withGraphIri"
+            "url": "classes/simpleRdf-Quad.html#method_withGraph"
         },                {
             "fqsen": "\\simpleRdf\\Quad\u003A\u003A\u0024subject",
             "name": "subject",
@@ -416,10 +416,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/simpleRdf-Quad.html#property_object"
         },                {
-            "fqsen": "\\simpleRdf\\Quad\u003A\u003A\u0024graphIri",
-            "name": "graphIri",
+            "fqsen": "\\simpleRdf\\Quad\u003A\u003A\u0024graph",
+            "name": "graph",
             "summary": "",
-            "url": "classes/simpleRdf-Quad.html#property_graphIri"
+            "url": "classes/simpleRdf-Quad.html#property_graph"
         },                {
             "fqsen": "\\simpleRdf\\RdfException",
             "name": "RdfException",
@@ -866,10 +866,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/rdfInterface-Quad.html#method_getObject"
         },                {
-            "fqsen": "\\rdfInterface\\Quad\u003A\u003AgetGraphIri\u0028\u0029",
-            "name": "getGraphIri",
+            "fqsen": "\\rdfInterface\\Quad\u003A\u003AgetGraph\u0028\u0029",
+            "name": "getGraph",
             "summary": "Null\u0020is\u0020not\u0020allowed\u0020to\u0020deal\u0020with\u0020the\u0020ambiguity\u0020between\u0020DefaultGraph\u0020and\nnull\u0020which\u0020mean\u0020the\u0020same\u0020\u0028although\u0020it\u0020should\u0020be\u0020noted\u0020that\u0020all\u0020quads\u0020in\nNamedNode\/BlankNode\u0020graphs\u0020also\u0020belong\u0020to\u0020the\u0020DefaultGraph\u0029.",
-            "url": "classes/rdfInterface-Quad.html#method_getGraphIri"
+            "url": "classes/rdfInterface-Quad.html#method_getGraph"
         },                {
             "fqsen": "\\rdfInterface\\Quad\u003A\u003AwithSubject\u0028\u0029",
             "name": "withSubject",
@@ -886,25 +886,40 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/rdfInterface-Quad.html#method_withObject"
         },                {
-            "fqsen": "\\rdfInterface\\Quad\u003A\u003AwithGraphIri\u0028\u0029",
-            "name": "withGraphIri",
+            "fqsen": "\\rdfInterface\\Quad\u003A\u003AwithGraph\u0028\u0029",
+            "name": "withGraph",
             "summary": "",
-            "url": "classes/rdfInterface-Quad.html#method_withGraphIri"
+            "url": "classes/rdfInterface-Quad.html#method_withGraph"
         },                {
             "fqsen": "\\rdfInterface\\QuadCompare",
             "name": "QuadCompare",
             "summary": "Interface\u0020allowing\u0020to\u0020compare\u0020Quads.",
             "url": "classes/rdfInterface-QuadCompare.html"
         },                {
-            "fqsen": "\\rdfInterface\\QuadCompare\u003A\u003Aequals\u0028\u0029",
-            "name": "equals",
-            "summary": "",
-            "url": "classes/rdfInterface-QuadCompare.html#method_equals"
-        },                {
             "fqsen": "\\rdfInterface\\QuadCompare\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
             "summary": "",
             "url": "classes/rdfInterface-QuadCompare.html#method___toString"
+        },                {
+            "fqsen": "\\rdfInterface\\QuadCompare\u003A\u003AgetSubject\u0028\u0029",
+            "name": "getSubject",
+            "summary": "",
+            "url": "classes/rdfInterface-QuadCompare.html#method_getSubject"
+        },                {
+            "fqsen": "\\rdfInterface\\QuadCompare\u003A\u003AgetPredicate\u0028\u0029",
+            "name": "getPredicate",
+            "summary": "",
+            "url": "classes/rdfInterface-QuadCompare.html#method_getPredicate"
+        },                {
+            "fqsen": "\\rdfInterface\\QuadCompare\u003A\u003AgetObject\u0028\u0029",
+            "name": "getObject",
+            "summary": "",
+            "url": "classes/rdfInterface-QuadCompare.html#method_getObject"
+        },                {
+            "fqsen": "\\rdfInterface\\QuadCompare\u003A\u003AgetGraph\u0028\u0029",
+            "name": "getGraph",
+            "summary": "",
+            "url": "classes/rdfInterface-QuadCompare.html#method_getGraph"
         },                {
             "fqsen": "\\rdfInterface\\QuadIterator",
             "name": "QuadIterator",
@@ -1000,6 +1015,11 @@ Search.appendIndex(
             "name": "equals",
             "summary": "",
             "url": "classes/rdfInterface-TermCompare.html#method_equals"
+        },                {
+            "fqsen": "\\rdfInterface\\TermCompare\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "",
+            "url": "classes/rdfInterface-TermCompare.html#method___toString"
         },                {
             "fqsen": "\\",
             "name": "\\",

@@ -87,6 +87,9 @@
     <article class="phpdocumentor-element -interface">
         <h2 class="phpdocumentor-content__title">
     QuadCompare
+            <span class="phpdocumentor-element__extends">
+            extends
+                            <a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>                    </span>
         </h2>
 
         <aside class="phpdocumentor-element-found-in">
@@ -140,9 +143,37 @@ not Quad. The QuadCompare interface introduces such a distinction.</p>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfInterface-QuadCompare.html#method_equals">equals()</a>
+    <a href="classes/rdfInterface-TermCompare.html#method_equals">equals()</a>
     <span>
                         &nbsp;: bool    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-QuadCompare.html#method_getGraph">getGraph()</a>
+    <span>
+                        &nbsp;: <a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-QuadCompare.html#method_getObject">getObject()</a>
+    <span>
+                        &nbsp;: <a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-QuadCompare.html#method_getPredicate">getPredicate()</a>
+    <span>
+                        &nbsp;: <a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-QuadCompare.html#method_getSubject">getSubject()</a>
+    <span>
+                        &nbsp;: <a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null    </span>
 </dt>
 <dd></dd>
 
@@ -170,7 +201,7 @@ not Quad. The QuadCompare interface introduces such a distinction.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-quadcompare.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php">QuadCompare.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">44</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 </aside>
 
     
@@ -197,25 +228,25 @@ not Quad. The QuadCompare interface introduces such a distinction.</p>
 >
     <h4 class="phpdocumentor-element__name" id="method_equals">
         equals()
-        <a href="classes/rdfInterface-QuadCompare.html#method_equals" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/rdfInterface-TermCompare.html#method_equals" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-quadcompare.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php">QuadCompare.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/TermCompare.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-termcompare.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/TermCompare.php">TermCompare.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">42</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">equals</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-Quad.html"><abbr title="\rdfInterface\Quad">Quad</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$quad</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">equals</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$term</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$quad</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-Quad.html"><abbr title="\rdfInterface\Quad">Quad</abbr></a></span>
+                <span class="phpdocumentor-signature__argument__name">$term</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -226,6 +257,134 @@ not Quad. The QuadCompare interface introduces such a distinction.</p>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getGraph">
+        getGraph()
+        <a href="classes/rdfInterface-QuadCompare.html#method_getGraph" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-quadcompare.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php">QuadCompare.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">50</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getGraph</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getObject">
+        getObject()
+        <a href="classes/rdfInterface-QuadCompare.html#method_getObject" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-quadcompare.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php">QuadCompare.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">48</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getObject</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getPredicate">
+        getPredicate()
+        <a href="classes/rdfInterface-QuadCompare.html#method_getPredicate" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-quadcompare.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php">QuadCompare.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">46</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getPredicate</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getSubject">
+        getSubject()
+        <a href="classes/rdfInterface-QuadCompare.html#method_getSubject" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-quadcompare.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/QuadCompare.php">QuadCompare.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">44</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSubject</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Term.html"><abbr title="\rdfInterface\Term">Term</abbr></a>|<a href="classes/rdfInterface-TermCompare.html"><abbr title="\rdfInterface\TermCompare">TermCompare</abbr></a>|null</span>
             &mdash;
             <section class="phpdocumentor-description"></section>
 
