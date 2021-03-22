@@ -7,7 +7,7 @@
 
 An RDF library for PHP implementing the https://github.com/sweetrdf/rdfInterface interface.
 
-The aim was to provide as simple, short and clear implementation as possible. Performance wasn't really important.
+The aim was to provide as simple, short and clear implementation as possible. Performance wasn't really important (see the Performance chapter below).
 
 It can be used as a baseline for testing performance of other libraries as well for testing interoperability of the rdfInterface implementations (e.g. making sure they work correctly with `rdfInterface\Term` objects created by other library).
 
@@ -19,7 +19,7 @@ It can be used as a baseline for testing performance of other libraries as well 
 
 ## Automatically generated documentation
 
-https://sweetrdf.github.io/simpleRdf/
+https://sweetrdf.github.io/simpleRdf/namespaces/simplerdf.html
 
 It's very incomplite but better than nothing.\
 [RdfInterface](https://github.com/sweetrdf/rdfInterface/) documentation is included which explains the most important design decisions.
@@ -75,3 +75,29 @@ $stream = fopen('pathToOutputTurtleFile', 'w');
 $serializer->serializeStream($stream, $graph);
 fclose($stream);
 ```
+
+## Performance
+
+The `simpleRdf\Dataset` class **shouldn't be used** to deal with larger amounts of quads.
+
+Adding a quad has computational complexity of `O(N)` where `N` is the number of quads in the dataset.
+It means adding `n` quads has computational complexity of `O(n!)` (read - it quickly gets out of hand with larger `n`).
+
+Just a sample results:
+
+| quads count | execution time [s] | relative quads count | relative execution time |
+|------|-----------|-----|--------|
+|  125 |  0.018090 |   1 |    1.0 |
+|  250 |  0.059559 |   2 |    3.3 |
+|  500 |  0.210958 |   4 |   11.7 |
+| 1000 |  0.849956 |   8 |   47.0 |
+| 2000 |  2.941319 |  16 |  162.6 |
+| 4000 | 10.697164 |  32 |  591.3 |
+| 8000 | 45.792556 |  64 | 2531.4 |
+
+You get the idea, don't you?
+
+Other operations are also not performant, e.g. all searches and in-place deletions have complexity of `O(N)` and all methods returning a new copy of the dataset have complexity of `O(N) + O(n!)` (where `N` is number of quads in the dataset and `n` the number of quads in the returned dataset).
+
+If you are looking for a performant implementation, please take a look at the [quickRdf](https://github.com/sweetrdf/quickRdf).
+
