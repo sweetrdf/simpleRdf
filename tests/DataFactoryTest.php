@@ -34,13 +34,4 @@ namespace simpleRdf;
 class DataFactoryTest extends \rdfInterface\tests\DataFactoryTest {
 
     use TestTrait;
-    
-    /**
-     * 
-     * @return void
-     */
-    public function testCreateVariable(): void {
-        $this->expectException(RdfException::class);
-        parent::testCreateVariable();
-    }
 }

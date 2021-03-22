@@ -43,16 +43,8 @@ use simpleRdf\DataFactory as DF;
  */
 class QuadTemplate implements iQuadTemplate {
 
-    /**
-     *
-     * @var iTerm|null
-     */
     private iTerm | null $subject;
 
-    /**
-     *
-     * @var iNamedNode|null
-     */
     private iNamedNode | null $predicate;
     private iTerm | null $object;
     private iNamedNode | iBlankNode | null $graphIri;
