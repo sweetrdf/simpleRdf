@@ -26,6 +26,7 @@
 
 namespace simpleRdf;
 
+use rdfInterface\Term;
 use rdfInterface\TermCompare;
 
 /**
@@ -51,10 +52,10 @@ trait TestTrait {
         return new Dataset();
     }
 
-    public static function getQuadTemplate(TermCompare | null $subject = null,
-                                           TermCompare | null $predicate = null,
-                                           TermCompare | null $object = null,
-                                           TermCompare | null $graphIri = null): \rdfInterface\QuadCompare {
+    public static function getQuadTemplate(TermCompare | Term | null $subject = null,
+                                           TermCompare | Term | null $predicate = null,
+                                           TermCompare | Term | null $object = null,
+                                           TermCompare | Term | null $graphIri = null): \rdfInterface\QuadCompare {
         return new \termTemplates\QuadTemplate($subject, $predicate, $object, $graphIri);
     }
 
