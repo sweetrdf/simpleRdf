@@ -29,7 +29,6 @@ namespace simpleRdf;
 use Generator;
 use Iterator;
 use OutOfBoundsException;
-use OutOfRangeException;
 use rdfInterface\BlankNode as iBlankNode;
 use rdfInterface\Quad as iQuad;
 use rdfInterface\QuadCompare as iQuadCompare;
@@ -113,7 +112,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
         return $dataset;
     }
 
-    public function copyExcept(iQuadCompare | iQuadIterator | callable | null $filter = null): iDataset {
+    public function copyExcept(iQuadCompare | iQuadIterator | callable | null $filter): iDataset {
         $dataset = new Dataset();
         foreach ($this->findNotMatchingQuads($filter) as $i) {
             $dataset->add($this->quads[$i]);
