@@ -128,7 +128,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Acurrent\u0028\u0029",
             "name": "current",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020current\u0020quad.",
             "url": "classes/simpleRdf-Dataset.html#method_current"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Akey\u0028\u0029",
@@ -715,6 +715,11 @@ Search.appendIndex(
             "name": "offsetUnset",
             "summary": "Removes\u0020a\u0020quad\u0020matching\u0020the\u0020\u0024offset.",
             "url": "classes/rdfInterface-Dataset.html#method_offsetUnset"
+        },                {
+            "fqsen": "\\rdfInterface\\Dataset\u003A\u003Acurrent\u0028\u0029",
+            "name": "current",
+            "summary": "Returns\u0020the\u0020current\u0020quad.",
+            "url": "classes/rdfInterface-Dataset.html#method_current"
         },                {
             "fqsen": "\\rdfInterface\\DatasetCompare",
             "name": "DatasetCompare",
