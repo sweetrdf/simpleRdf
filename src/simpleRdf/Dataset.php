@@ -164,12 +164,9 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
 
     // QuadIterator
 
-    public function current(): iQuad {
-        $cur = current($this->quads);
-        if ($cur === false) {
-            throw new OutOfBoundsException();
-        }
-        return $cur;
+    public function current(): iQuad | null {
+        $value = current($this->quads);
+        return $value === false ? null : $value;
     }
 
     public function key() {
@@ -201,19 +198,14 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
 
     /**
      *
-     * @param int | iQuad|iQuadCompare|callable $offset
+     * @param iQuad|iQuadCompare|callable $offset
      * @return bool
      */
     public function offsetExists($offset): bool {
         return $this->exists($offset);
     }
 
-    private function exists(int | iQuadCompare | callable $offset): bool {
-        if ($offset === 0) {
-            return count($this->quads) > 0;
-        } elseif (is_int($offset)) {
-            throw new OutOfRangeException();
-        }
+    private function exists(iQuadCompare | callable $offset): bool {
         try {
             $iter = $this->findMatchingQuads($offset);
             $this->checkIteratorEnd($iter);
@@ -225,19 +217,14 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
 
     /**
      *
-     * @param int|iQuad|iQuadCompare|callable $offset
+     * @param iQuad|iQuadCompare|callable $offset
      * @return iQuad
      */
     public function offsetGet($offset): iQuad {
         return $this->get($offset);
     }
 
-    private function get(int | iQuadCompare | callable $offset): iQuad {
-        if ($offset === 0) {
-            return $this->quads[0] ?? throw new OutOfBoundsException();
-        } elseif (is_int($offset)) {
-            throw new OutOfRangeException();
-        }
+    private function get(iQuadCompare | callable $offset): iQuad {
         $iter = $this->findMatchingQuads($offset);
         $idx  = $iter->current();
         $this->checkIteratorEnd($iter);
