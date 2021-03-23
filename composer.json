@@ -31,8 +31,8 @@
         "phpunit/php-code-coverage": "^9.2",
         "phpstan/phpstan": "*",
         "squizlabs/php_codesniffer": "*",
-        "sweetrdf/quick-rdf-io": "*",
         "php-coveralls/php-coveralls": "^2.4",
+        "sweetrdf/rdf-interface-tests": "dev-master",
         "sweetrdf/term-templates": "*"
     },
     "autoload-dev": {
