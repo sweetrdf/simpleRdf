@@ -29,6 +29,7 @@ namespace simpleRdf;
 use Generator;
 use Iterator;
 use OutOfBoundsException;
+use OutOfRangeException;
 use rdfInterface\BlankNode as iBlankNode;
 use rdfInterface\Quad as iQuad;
 use rdfInterface\QuadCompare as iQuadCompare;
@@ -200,14 +201,19 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
 
     /**
      *
-     * @param iQuad|iQuadCompare|callable $offset
+     * @param int | iQuad|iQuadCompare|callable $offset
      * @return bool
      */
     public function offsetExists($offset): bool {
         return $this->exists($offset);
     }
 
-    private function exists(iQuadCompare | callable $offset): bool {
+    private function exists(int | iQuadCompare | callable $offset): bool {
+        if ($offset === 0) {
+            return count($this->quads) > 0;
+        } elseif (is_int($offset)) {
+            throw new OutOfRangeException();
+        }
         try {
             $iter = $this->findMatchingQuads($offset);
             $this->checkIteratorEnd($iter);
@@ -219,14 +225,19 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
 
     /**
      *
-     * @param iQuad|iQuadCompare|callable $offset
+     * @param int|iQuad|iQuadCompare|callable $offset
      * @return iQuad
      */
     public function offsetGet($offset): iQuad {
         return $this->get($offset);
     }
 
-    private function get(iQuadCompare | callable $offset): iQuad {
+    private function get(int | iQuadCompare | callable $offset): iQuad {
+        if ($offset === 0) {
+            return $this->quads[0] ?? throw new OutOfBoundsException();
+        } elseif (is_int($offset)) {
+            throw new OutOfRangeException();
+        }
         $iter = $this->findMatchingQuads($offset);
         $idx  = $iter->current();
         $this->checkIteratorEnd($iter);
