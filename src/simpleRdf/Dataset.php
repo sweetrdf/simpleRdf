@@ -157,8 +157,13 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
 
     public function forEach(callable $fn): void {
         foreach ($this->quads as $n => $i) {
-            $this->quads[$n] = $fn($i, $this);
+            unset($this->quads[$n]);
+            $val = $fn($i, $this);
+            if ($val !== null) {
+                $this->add($val);
+            }
         }
+        $this->quads = array_values($this->quads);
     }
 
     // QuadIterator
