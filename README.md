@@ -21,7 +21,7 @@ It can be used as a baseline for testing performance of other libraries as well 
 
 https://sweetrdf.github.io/simpleRdf/namespaces/simplerdf.html
 
-It's very incomplite but better than nothing.\
+It's very incomplete but better than nothing.\
 [RdfInterface](https://github.com/sweetrdf/rdfInterface/) documentation is included which explains the most important design decisions.
 
 ## Usage
