@@ -92,14 +92,14 @@
     
             <span class="phpdocumentor-element__implements">
             implements
-                            <a href="classes/rdfInterface-Dataset.html"><abbr title="\rdfInterface\Dataset">Dataset</abbr></a>,                             <a href="classes/rdfInterface-DatasetMapReduce.html"><abbr title="\rdfInterface\DatasetMapReduce">DatasetMapReduce</abbr></a>,                             <a href="classes/rdfInterface-DatasetCompare.html"><abbr title="\rdfInterface\DatasetCompare">DatasetCompare</abbr></a>                    </span>
+                            <a href="classes/rdfInterface-Dataset.html"><abbr title="\rdfInterface\Dataset">Dataset</abbr></a>,                             <a href="classes/rdfInterface-DatasetMapReduce.html"><abbr title="\rdfInterface\DatasetMapReduce">DatasetMapReduce</abbr></a>,                             <a href="classes/rdfInterface-DatasetCompare.html"><abbr title="\rdfInterface\DatasetCompare">DatasetCompare</abbr></a>,                             <a href="classes/rdfInterface-DatasetListQuadParts.html"><abbr title="\rdfInterface\DatasetListQuadParts">DatasetListQuadParts</abbr></a>                    </span>
     
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">46</span>
 </aside>
 
             <p class="phpdocumentor-summary">Description of Graph</p>
@@ -138,6 +138,9 @@
         <dd>Immutable edge processing methods</dd>
             <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/rdfInterface-DatasetCompare.html"><abbr title="\rdfInterface\DatasetCompare">DatasetCompare</abbr></a></dt>
         <dd>Main, edge(quad) and Dataset-oriented Dataset API</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/rdfInterface-DatasetListQuadParts.html"><abbr title="\rdfInterface\DatasetListQuadParts">DatasetListQuadParts</abbr></a></dt>
+        <dd>Set of methods for listing distinct Terms being used on a given position
+of dataset quads.</dd>
     
     
     </dl>
@@ -251,6 +254,34 @@
     <a href="classes/simpleRdf-Dataset.html#method_key">key()</a>
     <span>
                         &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/simpleRdf-Dataset.html#method_listGraphs">listGraphs()</a>
+    <span>
+                        &nbsp;: <abbr title="\Generator">Generator</abbr>    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/simpleRdf-Dataset.html#method_listObjects">listObjects()</a>
+    <span>
+                        &nbsp;: <abbr title="\Generator">Generator</abbr>&lt;string|int, <abbr title="\simpleRdf\iTerm">iTerm</abbr>&gt;    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/simpleRdf-Dataset.html#method_listPredicates">listPredicates()</a>
+    <span>
+                        &nbsp;: <abbr title="\Generator">Generator</abbr>&lt;string|int, <abbr title="\simpleRdf\iNamedNode">iNamedNode</abbr>&gt;    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/simpleRdf-Dataset.html#method_listSubjects">listSubjects()</a>
+    <span>
+                        &nbsp;: <abbr title="\Generator">Generator</abbr>&lt;string|int, <abbr title="\simpleRdf\iTerm">iTerm</abbr>&gt;    </span>
 </dt>
 <dd></dd>
 
@@ -375,6 +406,13 @@ the $other one.</dd>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/simpleRdf-Dataset.html#method_listQuadElement">listQuadElement()</a>
+    <span>
+                        &nbsp;: <abbr title="\Generator">Generator</abbr>    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/simpleRdf-Dataset.html#method_prepareMatchFunction">prepareMatchFunction()</a>
     <span>
                         &nbsp;: callable    </span>
@@ -416,7 +454,7 @@ the $other one.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">52</span>
 </aside>
 
     
@@ -451,7 +489,7 @@ the $other one.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">53</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 </aside>
 
     
@@ -483,7 +521,7 @@ the $other one.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">58</span>
 </aside>
 
     
@@ -515,7 +553,7 @@ the $other one.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">86</span>
 </aside>
 
         <p class="phpdocumentor-summary">Adds quad(s) to the dataset.</p>
@@ -560,7 +598,7 @@ the $other one.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">369</span>
+    <span class="phpdocumentor-element-found-in__line">314</span>
 </aside>
 
     
@@ -602,7 +640,7 @@ the $other one.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">103</span>
+    <span class="phpdocumentor-element-found-in__line">104</span>
 </aside>
 
         <p class="phpdocumentor-summary">Creates a copy of the dataset.</p>
@@ -658,7 +696,7 @@ All quads for which the callable returns true are copied.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">115</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 </aside>
 
         <p class="phpdocumentor-summary">Creates a copy of the dataset.</p>
@@ -715,7 +753,7 @@ All quads for which the callable returns false are copied.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">198</span>
+    <span class="phpdocumentor-element-found-in__line">205</span>
 </aside>
 
     
@@ -747,7 +785,7 @@ All quads for which the callable returns false are copied.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">178</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns the current quad.</p>
@@ -788,7 +826,7 @@ an exception).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">136</span>
+    <span class="phpdocumentor-element-found-in__line">137</span>
 </aside>
 
         <p class="phpdocumentor-summary">In-place removes quads from the dataset.</p>
@@ -845,7 +883,7 @@ All quads for which the callable returns true are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">149</span>
+    <span class="phpdocumentor-element-found-in__line">150</span>
 </aside>
 
         <p class="phpdocumentor-summary">In-place removes quads from the dataset.</p>
@@ -902,7 +940,7 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">65</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 </aside>
 
     
@@ -944,20 +982,20 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">379</span>
+    <span class="phpdocumentor-element-found-in__line">324</span>
 </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">every</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">every</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$filter</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|callable</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -986,16 +1024,17 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">158</span>
+    <span class="phpdocumentor-element-found-in__line">159</span>
 </aside>
 
         <p class="phpdocumentor-summary">Iterates trough all quads replacing them with a callback result.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">forEach</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">forEach</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
+        <section class="phpdocumentor-description"><p>If the callback returns null, the quad should be removed from the dataset.</p>
+</section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1004,8 +1043,17 @@ All quads for which the callable returns false are removed.</li>
                 : <span class="phpdocumentor-signature__argument__return-type">callable</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>with signature <code class="prettyprint">fn(Quad, Dataset): Quad</code> runs on each quad</p>
+                    <section class="phpdocumentor-description"><p>with signature <code class="prettyprint">fn(Quad, Dataset): ?Quad</code> to be run
+an all quads</p>
 </section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
 
             </dd>
             </dl>
@@ -1032,7 +1080,7 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">176</span>
+    <span class="phpdocumentor-element-found-in__line">183</span>
 </aside>
 
     
@@ -1057,6 +1105,182 @@ All quads for which the callable returns false are removed.</li>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_listGraphs">
+        listGraphs()
+        <a href="classes/simpleRdf-Dataset.html#method_listGraphs" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">379</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">listGraphs</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr></span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_listObjects">
+        listObjects()
+        <a href="classes/simpleRdf-Dataset.html#method_listObjects" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">370</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">listObjects</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr>&lt;string|int, <abbr title="\simpleRdf\iTerm">iTerm</abbr>&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr>&lt;string|int, <abbr title="\simpleRdf\iTerm">iTerm</abbr>&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_listPredicates">
+        listPredicates()
+        <a href="classes/simpleRdf-Dataset.html#method_listPredicates" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">361</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">listPredicates</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr>&lt;string|int, <abbr title="\simpleRdf\iNamedNode">iNamedNode</abbr>&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr>&lt;string|int, <abbr title="\simpleRdf\iNamedNode">iNamedNode</abbr>&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_listSubjects">
+        listSubjects()
+        <a href="classes/simpleRdf-Dataset.html#method_listSubjects" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">352</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">listSubjects</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr>&lt;string|int, <abbr title="\simpleRdf\iTerm">iTerm</abbr>&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr>&lt;string|int, <abbr title="\simpleRdf\iTerm">iTerm</abbr>&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_map">
         map()
         <a href="classes/simpleRdf-Dataset.html#method_map" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1064,13 +1288,13 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">354</span>
+    <span class="phpdocumentor-element-found-in__line">287</span>
 </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">map</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Dataset.html"><abbr title="\rdfInterface\Dataset">Dataset</abbr></a></span></code>
+                <span class="phpdocumentor-signature__name">map</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-Dataset.html"><abbr title="\rdfInterface\Dataset">Dataset</abbr></a></span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1083,6 +1307,14 @@ All quads for which the callable returns false are removed.</li>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>function applied to every quad with signature <code class="prettyprint">fn(quad, dataset)</code></p>
 </section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
 
             </dd>
             </dl>
@@ -1109,7 +1341,7 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">184</span>
+    <span class="phpdocumentor-element-found-in__line">191</span>
 </aside>
 
     
@@ -1141,7 +1373,7 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">391</span>
+    <span class="phpdocumentor-element-found-in__line">336</span>
 </aside>
 
     
@@ -1183,7 +1415,7 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">208</span>
+    <span class="phpdocumentor-element-found-in__line">215</span>
 </aside>
 
         <p class="phpdocumentor-summary">Checks if a given offset exists.</p>
@@ -1228,7 +1460,7 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">227</span>
+    <span class="phpdocumentor-element-found-in__line">234</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns a quad matching the $offset.</p>
@@ -1273,7 +1505,7 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">244</span>
+    <span class="phpdocumentor-element-found-in__line">251</span>
 </aside>
 
         <p class="phpdocumentor-summary">Assigns a new value to the quad matching the $offset.</p>
@@ -1326,7 +1558,7 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">267</span>
+    <span class="phpdocumentor-element-found-in__line">274</span>
 </aside>
 
         <p class="phpdocumentor-summary">Removes a quad matching the $offset.</p>
@@ -1371,13 +1603,13 @@ All quads for which the callable returns false are removed.</li>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">362</span>
+    <span class="phpdocumentor-element-found-in__line">301</span>
 </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">reduce</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$initialValue</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">reduce</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$initialValue</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
         <section class="phpdocumentor-description"></section>
 
@@ -1396,6 +1628,14 @@ applied on each quad and returns last callback result</p>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$initialValue</span>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable</span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"></section>
@@ -1425,7 +1665,7 @@ applied on each quad and returns last callback result</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">188</span>
+    <span class="phpdocumentor-element-found-in__line">195</span>
 </aside>
 
     
@@ -1457,7 +1697,7 @@ applied on each quad and returns last callback result</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">123</span>
+    <span class="phpdocumentor-element-found-in__line">124</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns a new dataset being a union of the current one and the $other one.</p>
@@ -1503,7 +1743,7 @@ applied on each quad and returns last callback result</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">192</span>
+    <span class="phpdocumentor-element-found-in__line">199</span>
 </aside>
 
     
@@ -1535,7 +1775,7 @@ applied on each quad and returns last callback result</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">130</span>
+    <span class="phpdocumentor-element-found-in__line">131</span>
 </aside>
 
         <p class="phpdocumentor-summary">Returns a dataset being a symmetric difference of the current dataset and
@@ -1582,7 +1822,7 @@ the $other one.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">347</span>
+    <span class="phpdocumentor-element-found-in__line">475</span>
 </aside>
 
     
@@ -1641,7 +1881,7 @@ the $other one.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">212</span>
+    <span class="phpdocumentor-element-found-in__line">219</span>
 </aside>
 
     
@@ -1683,7 +1923,7 @@ the $other one.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">286</span>
+    <span class="phpdocumentor-element-found-in__line">414</span>
 </aside>
 
     
@@ -1742,7 +1982,7 @@ the $other one.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">307</span>
+    <span class="phpdocumentor-element-found-in__line">435</span>
 </aside>
 
     
@@ -1786,7 +2026,7 @@ the $other one.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">231</span>
+    <span class="phpdocumentor-element-found-in__line">238</span>
 </aside>
 
     
@@ -1821,6 +2061,55 @@ the $other one.</p>
             -private
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_listQuadElement">
+        listQuadElement()
+        <a href="classes/simpleRdf-Dataset.html#method_listQuadElement" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">383</span>
+</aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">listQuadElement</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$elementFn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompare.html"><abbr title="\rdfInterface\QuadCompare">QuadCompare</abbr></a>|<a href="classes/rdfInterface-QuadIterator.html"><abbr title="\rdfInterface\QuadIterator">QuadIterator</abbr></a>|callable|null</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$elementFn</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Generator">Generator</abbr></span>
+            &mdash;
+            <section class="phpdocumentor-description"></section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_prepareMatchFunction">
         prepareMatchFunction()
         <a href="classes/simpleRdf-Dataset.html#method_prepareMatchFunction" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1828,7 +2117,7 @@ the $other one.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">318</span>
+    <span class="phpdocumentor-element-found-in__line">446</span>
 </aside>
 
     
@@ -1870,7 +2159,7 @@ the $other one.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">252</span>
+    <span class="phpdocumentor-element-found-in__line">259</span>
 </aside>
 
     

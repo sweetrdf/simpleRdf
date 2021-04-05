@@ -191,26 +191,6 @@ Search.appendIndex(
             "summary": "Removes\u0020a\u0020quad\u0020matching\u0020the\u0020\u0024offset.",
             "url": "classes/simpleRdf-Dataset.html#method_offsetUnset"
         },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AfindMatchingQuads\u0028\u0029",
-            "name": "findMatchingQuads",
-            "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_findMatchingQuads"
-        },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AfindNotMatchingQuads\u0028\u0029",
-            "name": "findNotMatchingQuads",
-            "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_findNotMatchingQuads"
-        },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AprepareMatchFunction\u0028\u0029",
-            "name": "prepareMatchFunction",
-            "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_prepareMatchFunction"
-        },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AcheckIteratorEnd\u0028\u0029",
-            "name": "checkIteratorEnd",
-            "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_checkIteratorEnd"
-        },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Amap\u0028\u0029",
             "name": "map",
             "summary": "",
@@ -235,6 +215,51 @@ Search.appendIndex(
             "name": "none",
             "summary": "",
             "url": "classes/simpleRdf-Dataset.html#method_none"
+        },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistSubjects\u0028\u0029",
+            "name": "listSubjects",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_listSubjects"
+        },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistPredicates\u0028\u0029",
+            "name": "listPredicates",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_listPredicates"
+        },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistObjects\u0028\u0029",
+            "name": "listObjects",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_listObjects"
+        },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistGraphs\u0028\u0029",
+            "name": "listGraphs",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_listGraphs"
+        },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistQuadElement\u0028\u0029",
+            "name": "listQuadElement",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_listQuadElement"
+        },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AfindMatchingQuads\u0028\u0029",
+            "name": "findMatchingQuads",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_findMatchingQuads"
+        },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AfindNotMatchingQuads\u0028\u0029",
+            "name": "findNotMatchingQuads",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_findNotMatchingQuads"
+        },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AprepareMatchFunction\u0028\u0029",
+            "name": "prepareMatchFunction",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_prepareMatchFunction"
+        },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AcheckIteratorEnd\u0028\u0029",
+            "name": "checkIteratorEnd",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_checkIteratorEnd"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003A\u0024quads",
             "name": "quads",
@@ -740,6 +765,31 @@ Search.appendIndex(
             "name": "any",
             "summary": "",
             "url": "classes/rdfInterface-DatasetCompare.html#method_any"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetListQuadParts",
+            "name": "DatasetListQuadParts",
+            "summary": "Set\u0020of\u0020methods\u0020for\u0020listing\u0020distinct\u0020Terms\u0020being\u0020used\u0020on\u0020a\u0020given\u0020position\nof\u0020dataset\u0020quads.",
+            "url": "classes/rdfInterface-DatasetListQuadParts.html"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetListQuadParts\u003A\u003AlistSubjects\u0028\u0029",
+            "name": "listSubjects",
+            "summary": "",
+            "url": "classes/rdfInterface-DatasetListQuadParts.html#method_listSubjects"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetListQuadParts\u003A\u003AlistPredicates\u0028\u0029",
+            "name": "listPredicates",
+            "summary": "",
+            "url": "classes/rdfInterface-DatasetListQuadParts.html#method_listPredicates"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetListQuadParts\u003A\u003AlistObjects\u0028\u0029",
+            "name": "listObjects",
+            "summary": "",
+            "url": "classes/rdfInterface-DatasetListQuadParts.html#method_listObjects"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetListQuadParts\u003A\u003AlistGraphs\u0028\u0029",
+            "name": "listGraphs",
+            "summary": "",
+            "url": "classes/rdfInterface-DatasetListQuadParts.html#method_listGraphs"
         },                {
             "fqsen": "\\rdfInterface\\DatasetMapReduce",
             "name": "DatasetMapReduce",
