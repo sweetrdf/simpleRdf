@@ -35,6 +35,7 @@ use rdfInterface\QuadCompare as iQuadCompare;
 use rdfInterface\QuadIterator as iQuadIterator;
 use rdfInterface\Dataset as iDataset;
 use rdfInterface\DatasetMapReduce as iDatasetMapReduce;
+use rdfInterface\DatasetListQuadParts as iDatasetListQuadParts;
 use rdfInterface\DatasetCompare as iDatasetCompare;
 
 /**
@@ -42,7 +43,7 @@ use rdfInterface\DatasetCompare as iDatasetCompare;
  *
  * @author zozlak
  */
-class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
+class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetListQuadParts {
 
     /**
      *
@@ -66,7 +67,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
         $n = 0;
         // $other contained in $this
         foreach ($other as $i) {
-            if (!($i->getSubject() instanceof iBlankNode)) {
+            if (!($i->getSubject() instanceof iBlankNode) && !($i->getObject() instanceof iBlankNode)) {
                 if (!$this->offsetExists($i)) {
                     return false;
                 }
@@ -75,7 +76,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
         }
         // $this contained in $other
         foreach ($this as $i) {
-            if (!($i->getSubject() instanceof iBlankNode)) {
+            if (!($i->getSubject() instanceof iBlankNode) && !($i->getObject() instanceof iBlankNode)) {
                 $n--;
             }
         }
@@ -155,15 +156,21 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
         return $deleted;
     }
 
-    public function forEach(callable $fn): void {
-        foreach ($this->quads as $n => $i) {
-            unset($this->quads[$n]);
-            $val = $fn($i, $this);
-            if ($val !== null) {
-                $this->add($val);
+    public function forEach(callable $fn,
+                            iQuadCompare | iQuadIterator | callable $filter = null): void {
+        try {
+            $idx = iterator_to_array($this->findMatchingQuads($filter)); // we need a copy as $this->quads will be modified in-place
+            foreach ($idx as $i) {
+                $val = $fn($this->quads[$i], $this);
+                unset($this->quads[$i]);
+                if ($val !== null) {
+                    $this->add($val);
+                }
             }
+            $this->quads = array_values($this->quads);
+        } catch (OutOfBoundsException $e) {
+            
         }
-        $this->quads = array_values($this->quads);
     }
 
     // QuadIterator
@@ -277,6 +284,127 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
         }
     }
 
+    public function map(callable $fn,
+                        iQuadCompare | iQuadIterator | callable $filter = null): iDatasetMapReduce {
+        $ret = new Dataset();
+        try {
+            $idx = $this->findMatchingQuads($filter);
+            foreach ($idx as $i) {
+                $ret->add($fn($this->quads[$i], $this));
+            }
+        } catch (OutOfBoundsException $e) {
+            
+        }
+        return $ret;
+    }
+
+    public function reduce(callable $fn, $initialValue = null,
+                           iQuadCompare | iQuadIterator | callable $filter = null): mixed {
+        try {
+            $idx = $this->findMatchingQuads($filter);
+            foreach ($idx as $i) {
+                $initialValue = $fn($initialValue, $this->quads[$i], $this);
+            }
+        } catch (OutOfBoundsException $e) {
+            
+        }
+        return $initialValue;
+    }
+
+    public function any(iQuadCompare | iQuadIterator | callable $filter): bool {
+        try {
+            $iter = $this->findMatchingQuads($filter);
+            $iter = $iter->current(); // so PHP doesn't optimize previous line out
+            return true;
+        } catch (OutOfBoundsException) {
+            return false;
+        }
+    }
+
+    public function every(iQuadCompare | iQuadIterator | callable $filter): bool {
+        try {
+            $n = 0;
+            foreach ($this->findMatchingQuads($filter) as $i) {
+                $n++;
+            }
+            return $n === $this->count();
+        } catch (OutOfBoundsException) {
+            return false;
+        }
+    }
+
+    public function none(iQuadCompare | iQuadIterator | callable $filter): bool {
+        try {
+            $iter = $this->findMatchingQuads($filter);
+            $iter = $iter->current(); // so PHP doesn't optimize previous line out
+            return false;
+        } catch (OutOfBoundsException) {
+            return true;
+        }
+    }
+    // DatasetListQuadParts
+
+    /**
+     * 
+     * @param iQuadCompare|iQuadIterator|callable $filter
+     * @return Generator<iTerm>
+     */
+    public function listSubjects(iQuadCompare | iQuadIterator | callable $filter = null): Generator {
+        yield from $this->listQuadElement($filter, 'getSubject');
+    }
+
+    /**
+     * 
+     * @param iQuadCompare|iQuadIterator|callable $filter
+     * @return Generator<iNamedNode>
+     */
+    public function listPredicates(iQuadCompare | iQuadIterator | callable $filter = null): Generator {
+        yield from $this->listQuadElement($filter, 'getPredicate');
+    }
+
+    /**
+     * 
+     * @param iQuadCompare|iQuadIterator|callable $filter
+     * @return Generator<iTerm>
+     */
+    public function listObjects(iQuadCompare | iQuadIterator | callable $filter = null): Generator {
+        yield from $this->listQuadElement($filter, 'getObject');
+    }
+
+    /**
+     * 
+     * @param iQuadCompare|iQuadIterator|callable $filter
+     * @return Generator<iNamedNode | iBlankNode | iDefaultGraph>
+     */
+    public function listGraphs(iQuadCompare | iQuadIterator | callable $filter = null): Generator {
+        yield from $this->listQuadElement($filter, 'getGraph');
+    }
+
+    private function listQuadElement(iQuadCompare | iQuadIterator | callable | null $filter,
+                                     string $elementFn): Generator {
+        try {
+            $spotted = [];
+            $idx     = $this->findMatchingQuads($filter);
+            foreach ($idx as $i) {
+                $i    = $this->quads[$i]->$elementFn();
+                $flag = true;
+                foreach ($spotted as $j) {
+                    if ($j->equals($i)) {
+                        $flag = false;
+                        break;
+                    }
+                }
+                if ($flag) {
+                    yield $i;
+                    $spotted[] = $i;
+                }
+            }
+        } catch (OutOfBoundsException $ex) {
+            yield from [];
+        }
+    }
+    // Private Part
+
     /**
      *
      * @param iQuadCompare|iQuadIterator|callable|null $offset
@@ -348,53 +476,6 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare {
         $i->next();
         if ($i->key() !== null) {
             throw new OutOfBoundsException("More than one quad matched");
-        }
-    }
-
-    public function map(callable $fn): iDataset {
-        $ret = new Dataset();
-        foreach ($this as $i) {
-            $ret->add($fn($i, $this));
-        }
-        return $ret;
-    }
-
-    public function reduce(callable $fn, $initialValue = null): mixed {
-        foreach ($this as $i) {
-            $initialValue = $fn($initialValue, $i, $this);
-        }
-        return $initialValue;
-    }
-
-    public function any(iQuadCompare | iQuadIterator | callable $filter): bool {
-        try {
-            $iter = $this->findMatchingQuads($filter);
-            $iter = $iter->current(); // so PHP doesn't optimize previous line out
-            return true;
-        } catch (OutOfBoundsException) {
-            return false;
-        }
-    }
-
-    public function every(iQuadCompare | callable $filter): bool {
-        try {
-            $n = 0;
-            foreach ($this->findMatchingQuads($filter) as $i) {
-                $n++;
-            }
-            return $n === $this->count();
-        } catch (OutOfBoundsException) {
-            return false;
-        }
-    }
-
-    public function none(iQuadCompare | iQuadIterator | callable $filter): bool {
-        try {
-            $iter = $this->findMatchingQuads($filter);
-            $iter = $iter->current(); // so PHP doesn't optimize previous line out
-            return false;
-        } catch (OutOfBoundsException) {
-            return true;
         }
     }
 }
