@@ -34,4 +34,8 @@ namespace simpleRdf;
 class DatasetListQuadPartsTest extends \rdfInterface\tests\DatasetListQuadPartsTest {
 
     use TestTrait;
+
+    public static function getDataset(): \rdfInterface\DatasetListQuadParts {
+        return new Dataset();
+    }
 }
