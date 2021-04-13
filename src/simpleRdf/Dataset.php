@@ -69,7 +69,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
         $n = 0;
         // $other contained in $this
         foreach ($other as $i) {
-            if (!($i->getSubject() instanceof iBlankNode) && !($i->getObject() instanceof iBlankNode)) {
+            if ($i !== null && !($i->getSubject() instanceof iBlankNode) && !($i->getObject() instanceof iBlankNode)) {
                 if (!$this->offsetExists($i)) {
                     return false;
                 }
@@ -78,7 +78,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
         }
         // $this contained in $other
         foreach ($this as $i) {
-            if (!($i->getSubject() instanceof iBlankNode) && !($i->getObject() instanceof iBlankNode)) {
+            if ($i !== null && !($i->getSubject() instanceof iBlankNode) && !($i->getObject() instanceof iBlankNode)) {
                 $n--;
             }
         }
@@ -92,12 +92,12 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
         foreach ($quads as $i) {
             $match = false;
             foreach ($this->quads as $j) {
-                if ($j->equals($i)) {
+                if ($i !== null && $j->equals($i)) {
                     $match = true;
                     break;
                 }
             }
-            if (!$match) {
+            if (!$match && $i !== null) {
                 $this->quads[] = $i;
             }
         }
@@ -457,7 +457,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
         } elseif ($offset instanceof iQuadIterator) {
             $fn = function (iQuad $x) use ($offset): bool {
                 foreach ($offset as $i) {
-                    if ($i->equals($x)) {
+                    if ($i !== null && $i->equals($x)) {
                         return true;
                     }
                 }
