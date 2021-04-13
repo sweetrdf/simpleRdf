@@ -78,7 +78,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
         }
         // $this contained in $other
         foreach ($this as $i) {
-            if ($i !== null && !($i->getSubject() instanceof iBlankNode) && !($i->getObject() instanceof iBlankNode)) {
+            if (!($i?->getSubject() instanceof iBlankNode) && !($i?->getObject() instanceof iBlankNode)) {
                 $n--;
             }
         }
@@ -457,7 +457,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
         } elseif ($offset instanceof iQuadIterator) {
             $fn = function (iQuad $x) use ($offset): bool {
                 foreach ($offset as $i) {
-                    if ($i !== null && $i->equals($x)) {
+                    if ($i?->equals($x)) {
                         return true;
                     }
                 }
