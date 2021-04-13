@@ -29,10 +29,12 @@ namespace simpleRdf;
 use Generator;
 use Iterator;
 use OutOfBoundsException;
+use rdfHelpers\GenericTermIterator;
 use rdfInterface\BlankNode as iBlankNode;
 use rdfInterface\Quad as iQuad;
 use rdfInterface\QuadCompare as iQuadCompare;
 use rdfInterface\QuadIterator as iQuadIterator;
+use rdfInterface\TermIterator as iTermIterator;
 use rdfInterface\Dataset as iDataset;
 use rdfInterface\DatasetMapReduce as iDatasetMapReduce;
 use rdfInterface\DatasetListQuadParts as iDatasetListQuadParts;
@@ -347,46 +349,44 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
     /**
      * 
      * @param iQuadCompare|iQuadIterator|callable $filter
-     * @return Generator<iTerm>
+     * @return iTermIterator
      */
-    public function listSubjects(iQuadCompare | iQuadIterator | callable $filter = null): Generator {
-        yield from $this->listQuadElement($filter, 'getSubject');
+    public function listSubjects(iQuadCompare | iQuadIterator | callable $filter = null): iTermIterator {
+        return $this->listQuadElement($filter, 'getSubject');
     }
 
     /**
      * 
      * @param iQuadCompare|iQuadIterator|callable $filter
-     * @return Generator<iNamedNode>
+     * @return iTermIterator
      */
-    public function listPredicates(iQuadCompare | iQuadIterator | callable $filter = null): Generator {
-        yield from $this->listQuadElement($filter, 'getPredicate');
+    public function listPredicates(iQuadCompare | iQuadIterator | callable $filter = null): iTermIterator {
+        return $this->listQuadElement($filter, 'getPredicate');
     }
 
     /**
      * 
      * @param iQuadCompare|iQuadIterator|callable $filter
-     * @return Generator<iTerm>
+     * @return iTermIterator
      */
-    public function listObjects(iQuadCompare | iQuadIterator | callable $filter = null): Generator {
-        yield from $this->listQuadElement($filter, 'getObject');
+    public function listObjects(iQuadCompare | iQuadIterator | callable $filter = null): iTermIterator {
+        return $this->listQuadElement($filter, 'getObject');
     }
 
     /**
      * 
      * @param iQuadCompare|iQuadIterator|callable $filter
-     * @return Generator<iNamedNode | iBlankNode | iDefaultGraph>
+     * @return iTermIterator
      */
-    public function listGraphs(iQuadCompare | iQuadIterator | callable $filter = null): Generator {
-        yield from $this->listQuadElement($filter, 'getGraph');
+    public function listGraphs(iQuadCompare | iQuadIterator | callable $filter = null): iTermIterator {
+        return $this->listQuadElement($filter, 'getGraph');
     }
 
     private function listQuadElement(iQuadCompare | iQuadIterator | callable | null $filter,
-                                     string $elementFn): Generator {
+                                     string $elementFn): iTermIterator {
+        $spotted = [];
         try {
-            $spotted = [];
-            // materialize to avoid problems with parallel quads iterations
-            $idx     = iterator_to_array($this->findMatchingQuads($filter));
-            foreach ($idx as $i) {
+            foreach ($this->findMatchingQuads($filter) as $i) {
                 $i    = $this->quads[$i]->$elementFn();
                 $flag = true;
                 foreach ($spotted as $j) {
@@ -396,13 +396,13 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
                     }
                 }
                 if ($flag) {
-                    yield $i;
                     $spotted[] = $i;
                 }
             }
         } catch (OutOfBoundsException $ex) {
-            yield from [];
+            
         }
+        return new GenericTermIterator($spotted);
     }
     // Private Part
 
@@ -445,17 +445,17 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
     }
 
     private function prepareMatchFunction(iQuadCompare | iQuadIterator | callable | bool $offset): callable {
-        $fn = function() use ($offset) {
+        $fn = function () use ($offset) {
             return $offset;
         };
         if (is_callable($offset)) {
             $fn = $offset;
         } elseif ($offset instanceof iQuad || $offset instanceof iQuadCompare) {
-            $fn = function(iQuad $x) use($offset): bool {
+            $fn = function (iQuad $x) use ($offset): bool {
                 return $offset->equals($x);
             };
         } elseif ($offset instanceof iQuadIterator) {
-            $fn = function(iQuad $x) use($offset): bool {
+            $fn = function (iQuad $x) use ($offset): bool {
                 foreach ($offset as $i) {
                     if ($i->equals($x)) {
                         return true;
