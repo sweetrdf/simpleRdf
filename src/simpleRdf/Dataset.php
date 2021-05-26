@@ -348,37 +348,37 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
 
     /**
      * 
-     * @param iQuadCompare|iQuadIterator|callable $filter
+     * @param iQuadCompare|iQuadIterator|callable|null $filter
      * @return iTermIterator
      */
-    public function listSubjects(iQuadCompare | iQuadIterator | callable $filter = null): iTermIterator {
+    public function listSubjects(iQuadCompare | iQuadIterator | callable | null $filter = null): iTermIterator {
         return $this->listQuadElement($filter, 'getSubject');
     }
 
     /**
      * 
-     * @param iQuadCompare|iQuadIterator|callable $filter
+     * @param iQuadCompare|iQuadIterator|callable|null $filter
      * @return iTermIterator
      */
-    public function listPredicates(iQuadCompare | iQuadIterator | callable $filter = null): iTermIterator {
+    public function listPredicates(iQuadCompare | iQuadIterator | callable | null $filter = null): iTermIterator {
         return $this->listQuadElement($filter, 'getPredicate');
     }
 
     /**
      * 
-     * @param iQuadCompare|iQuadIterator|callable $filter
+     * @param iQuadCompare|iQuadIterator|callable|null $filter
      * @return iTermIterator
      */
-    public function listObjects(iQuadCompare | iQuadIterator | callable $filter = null): iTermIterator {
+    public function listObjects(iQuadCompare | iQuadIterator | callable | null $filter = null): iTermIterator {
         return $this->listQuadElement($filter, 'getObject');
     }
 
     /**
      * 
-     * @param iQuadCompare|iQuadIterator|callable $filter
+     * @param iQuadCompare|iQuadIterator|callable|null $filter
      * @return iTermIterator
      */
-    public function listGraphs(iQuadCompare | iQuadIterator | callable $filter = null): iTermIterator {
+    public function listGraphs(iQuadCompare | iQuadIterator | callable | null $filter = null): iTermIterator {
         return $this->listQuadElement($filter, 'getGraph');
     }
 
