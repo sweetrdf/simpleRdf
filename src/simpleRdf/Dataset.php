@@ -182,7 +182,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
         return $value === false ? null : $value;
     }
 
-    public function key() {
+    public function key(): mixed {
         $key = key($this->quads);
         if ($key === null) {
             throw new OutOfBoundsException();
