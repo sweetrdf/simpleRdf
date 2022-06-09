@@ -31,7 +31,7 @@ namespace simpleRdf;
  *
  * @author zozlak
  */
-class RdfNamespaceTest extends \rdfInterface\tests\RdfNamespaceTest {
+class RdfNamespaceTest extends \rdfInterface\tests\RdfNamespaceInterfaceTest {
 
     use TestTrait;
 }

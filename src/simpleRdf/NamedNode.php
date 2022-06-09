@@ -26,15 +26,15 @@
 
 namespace simpleRdf;
 
-use rdfInterface\NamedNode as iNamedNode;
-use rdfInterface\Term as iTerm;
+use rdfInterface\NamedNodeInterface as iNamedNode;
+use rdfInterface\TermInterface as iTerm;
 
 /**
  * Description of Iri
  *
  * @author zozlak
  */
-class NamedNode implements \rdfInterface\NamedNode {
+class NamedNode implements iNamedNode {
 
     /**
      *

@@ -31,7 +31,7 @@ namespace simpleRdf;
  *
  * @author zozlak
  */
-class TermsTest extends \rdfInterface\tests\TermsTest {
+class TermsTest extends \rdfInterface\tests\TermsInterfaceTest {
 
     use TestTrait;
 }

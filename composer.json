@@ -15,8 +15,8 @@
     "require": {
         "php": ">=8.0",
         "zozlak/rdf-constants": "^1.1",
-        "sweetrdf/rdf-helpers": "*",
-        "sweetrdf/rdf-interface": "~0.10.0 | ~0.11.0"
+        "sweetrdf/rdf-helpers": "dev-master",
+        "sweetrdf/rdf-interface": "dev-master"
     },
     "suggest": {
         "sweetrdf/quick-rdf-io": "*"
@@ -32,8 +32,8 @@
         "phpstan/phpstan": "*",
         "squizlabs/php_codesniffer": "*",
         "php-coveralls/php-coveralls": "^2.4",
-        "sweetrdf/rdf-interface-tests": "~0.10.0",
-        "sweetrdf/term-templates": "*"
+        "sweetrdf/rdf-interface-tests": "dev-master",
+        "sweetrdf/term-templates": "dev-master"
     },
     "autoload-dev": {
         "psr-4": {

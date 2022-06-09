@@ -31,7 +31,7 @@ namespace simpleRdf;
  *
  * @author zozlak
  */
-class DataFactoryTest extends \rdfInterface\tests\DataFactoryTest {
+class DataFactoryTest extends \rdfInterface\tests\DataFactoryInterfaceTest {
 
     use TestTrait;
 }

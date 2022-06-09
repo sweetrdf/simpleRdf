@@ -26,7 +26,7 @@
 
 namespace simpleRdf;
 
-use rdfInterface\NamedNode;
+use rdfInterface\NamedNodeInterface;
 use simpleRdf\DataFactory as DF;
 
 /**
@@ -36,7 +36,7 @@ use simpleRdf\DataFactory as DF;
  */
 class RdfNamespace extends \rdfHelpers\RdfNamespace {
 
-    protected function getNamedNode(string $iri): NamedNode {
+    protected function getNamedNode(string $iri): NamedNodeInterface {
         return DF::namedNode($iri);
     }
 }

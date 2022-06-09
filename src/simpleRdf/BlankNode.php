@@ -26,15 +26,15 @@
 
 namespace simpleRdf;
 
-use rdfInterface\BlankNode as iBlankNode;
-use rdfInterface\Term as iTerm;
+use rdfInterface\BlankNodeInterface as iBlankNode;
+use rdfInterface\TermInterface as iTerm;
 
 /**
  * Description of BlankNode
  *
  * @author zozlak
  */
-class BlankNode implements \rdfInterface\BlankNode {
+class BlankNode implements iBlankNode {
 
     private static int $n = 0;
 

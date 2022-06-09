@@ -30,7 +30,7 @@ namespace simpleRdf;
  *
  * @author zozlak
  */
-class DatasetTest extends \rdfInterface\tests\DatasetTest {
+class DatasetTest extends \rdfInterface\tests\DatasetInterfaceTest {
 
     use TestTrait;
 }

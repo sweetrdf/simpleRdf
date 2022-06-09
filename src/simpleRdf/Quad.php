@@ -27,12 +27,12 @@
 namespace simpleRdf;
 
 use BadMethodCallException;
-use rdfInterface\NamedNode as iNamedNode;
-use rdfInterface\BlankNode as iBlankNode;
-use rdfInterface\DefaultGraph as iDefaultGraph;
-use rdfInterface\Literal as iLiteral;
-use rdfInterface\Term as iTerm;
-use rdfInterface\Quad as iQuad;
+use rdfInterface\NamedNodeInterface as iNamedNode;
+use rdfInterface\BlankNodeInterface as iBlankNode;
+use rdfInterface\DefaultGraphInterface as iDefaultGraph;
+use rdfInterface\LiteralInterface as iLiteral;
+use rdfInterface\TermInterface as iTerm;
+use rdfInterface\QuadInterface as iQuad;
 use simpleRdf\DataFactory as DF;
 
 /**

@@ -29,8 +29,8 @@ namespace simpleRdf;
 use BadMethodCallException;
 use Stringable;
 use zozlak\RdfConstants as RDF;
-use rdfInterface\Literal as iLiteral;
-use rdfInterface\Term as iTerm;
+use rdfInterface\LiteralInterface as iLiteral;
+use rdfInterface\TermInterface as iTerm;
 use simpleRdf\DataFactory as DF;
 
 /**
@@ -38,7 +38,7 @@ use simpleRdf\DataFactory as DF;
  *
  * @author zozlak
  */
-class Literal implements \rdfInterface\Literal {
+class Literal implements iLiteral {
 
     /**
      *
@@ -123,7 +123,7 @@ class Literal implements \rdfInterface\Literal {
         }
     }
 
-    public function withValue(int | float | string | bool | Stringable $value): \rdfInterface\Literal {
+    public function withValue(int | float | string | bool | Stringable $value): iLiteral{
         $lang     = $datatype = null;
         if (is_string($value) || $value instanceof Stringable) {
             $lang     = $this->lang;
@@ -132,7 +132,7 @@ class Literal implements \rdfInterface\Literal {
         return DF::literal($value, $lang, $datatype);
     }
 
-    public function withLang(?string $lang): \rdfInterface\Literal {
+    public function withLang(?string $lang): iLiteral{
         $hadLang = $this->lang !== null;
         $hasLang = !empty($lang);
         if ($hadLang !== $hasLang) {
@@ -143,7 +143,7 @@ class Literal implements \rdfInterface\Literal {
         return DF::literal($this->value, $lang, $datatype);
     }
 
-    public function withDatatype(string $datatype): \rdfInterface\Literal {
+    public function withDatatype(string $datatype): iLiteral{
         if (empty($datatype) || $datatype === RDF::RDF_LANG_STRING) {
             throw new BadMethodCallException("Datatype can't be empty nor rdf:langString");
         }

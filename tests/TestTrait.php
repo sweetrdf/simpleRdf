@@ -26,8 +26,9 @@
 
 namespace simpleRdf;
 
-use rdfInterface\Term;
-use rdfInterface\TermCompare;
+use rdfInterface\TermInterface as iTerm;
+use rdfInterface\TermCompareInterface as iTermCompare;
+use rdfInterface\QuadCompareInterface as iQuadCompare;
 
 /**
  * Description of TestTrait
@@ -36,30 +37,30 @@ use rdfInterface\TermCompare;
  */
 trait TestTrait {
 
-    public static function getDataFactory(): \rdfInterface\DataFactory {
+    public static function getDataFactory(): DataFactory {
         return new DataFactory();
     }
 
-    public static function getForeignDataFactory(): \rdfInterface\DataFactory {
+    public static function getForeignDataFactory(): DataFactory {
         return new DataFactory();
     }
 
-    public static function getDataset(): \rdfInterface\Dataset {
+    public static function getDataset(): Dataset {
         return new Dataset();
     }
 
-    public static function getForeignDataset(): \rdfInterface\Dataset {
+    public static function getForeignDataset(): Dataset {
         return new Dataset();
     }
 
-    public static function getQuadTemplate(TermCompare | Term | null $subject = null,
-                                           TermCompare | Term | null $predicate = null,
-                                           TermCompare | Term | null $object = null,
-                                           TermCompare | Term | null $graphIri = null): \rdfInterface\QuadCompare {
+    public static function getQuadTemplate(iTermCompare | iTerm | null $subject = null,
+                                           iTermCompare | iTerm | null $predicate = null,
+                                           iTermCompare | iTerm | null $object = null,
+                                           iTermCompare | iTerm | null $graphIri = null): iQuadCompare {
         return new \termTemplates\QuadTemplate($subject, $predicate, $object, $graphIri);
     }
 
-    public static function getRdfNamespace(): \rdfInterface\RdfNamespace {
+    public static function getRdfNamespace(): RdfNamespace {
         return new RdfNamespace();
     }
 }
