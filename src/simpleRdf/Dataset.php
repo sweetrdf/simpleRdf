@@ -177,6 +177,12 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
         }
     }
 
+    // QuadIteratorAggregate
+
+    public function getIterator(iQuadCompare | iQuadIterator | iQuadIteratorAggregate | callable | null $filter = null): GenericQuadIterator {
+        return new GenericQuadIterator($filter !== null ? $this->copy($filter)->quads : $this->quads);
+    }
+
     // Countable
 
     public function count(): int {
@@ -370,15 +376,6 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
      */
     public function listGraphs(iQuadCompare | iQuadIterator | iQuadIteratorAggregate | callable | null $filter = null): GenericTermIterator {
         return $this->listQuadElement($filter, 'getGraph');
-    }
-
-    /**
-     * 
-     * @param iQuadCompare|iQuadIterator|iQuadIteratorAggregate|callable|null $filter
-     * @return GenericQuadIterator
-     */
-    public function getIterator(iQuadCompare | iQuadIterator | iQuadIteratorAggregate | callable | null $filter = null): GenericQuadIterator {
-        return new GenericQuadIterator($filter !== null ? $this->copy($filter)->quads : $this->quads);
     }
 
     private function listQuadElement(iQuadCompare | iQuadIterator | iQuadIteratorAggregate | callable | null $filter,
