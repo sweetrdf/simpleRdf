@@ -126,6 +126,11 @@ Search.appendIndex(
             "summary": "Iterates\u0020trough\u0020all\u0020quads\u0020replacing\u0020them\u0020with\u0020a\u0020callback\u0020result.",
             "url": "classes/simpleRdf-Dataset.html#method_forEach"
         },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AgetIterator\u0028\u0029",
+            "name": "getIterator",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_getIterator"
+        },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Acount\u0028\u0029",
             "name": "count",
             "summary": "",
@@ -210,11 +215,6 @@ Search.appendIndex(
             "name": "listGraphs",
             "summary": "",
             "url": "classes/simpleRdf-Dataset.html#method_listGraphs"
-        },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AgetIterator\u0028\u0029",
-            "name": "getIterator",
-            "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_getIterator"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistQuadElement\u0028\u0029",
             "name": "listQuadElement",
