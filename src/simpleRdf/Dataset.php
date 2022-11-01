@@ -192,14 +192,14 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
 
     /**
      *
-     * @param iQuad|iQuadCompare|callable $offset
+     * @param iQuad|iQuadCompare|callable|int<0, 0> $offset
      * @return bool
      */
     public function offsetExists($offset): bool {
         return $this->exists($offset);
     }
 
-    private function exists(iQuadCompare | callable $offset): bool {
+    private function exists(iQuadCompare | callable | int $offset): bool {
         try {
             $iter = $this->findMatchingQuads($offset);
             $this->checkIteratorEnd($iter);
@@ -225,15 +225,6 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
      * @throws OutOfBoundsException
      */
     private function get(iQuadCompare | callable | int $offset): iQuad {
-        if (is_int($offset)) {
-            if ($offset !== 0) {
-                throw new OutOfBoundsException("Only integer offset of 0 is allowed");
-            }
-            if (count($this->quads) === 0) {
-                throw new OutOfBoundsException("Dataset is empty");
-            }
-            return $this->quads[0];
-        }
         $iter = $this->findMatchingQuads($offset);
         $idx  = $iter->current();
         $this->checkIteratorEnd($iter);
@@ -409,8 +400,11 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
      * @throws OutOfBoundsException
      */
     private function findMatchingQuads(
-        iQuadCompare | iQuadIterator | iQuadIteratorAggregate | callable | null $offset
+        iQuadCompare | iQuadIterator | iQuadIteratorAggregate | callable | int | null $offset
     ): Generator {
+        if (is_int($offset) && $offset !== 0) {
+            throw new OutOfBoundsException("Only integer offset of 0 is allowed");
+        }
         $fn = $this->prepareMatchFunction($offset ?? true);
         $n  = 0;
         foreach ($this->quads as $i => $q) {
@@ -440,7 +434,7 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
         }
     }
 
-    private function prepareMatchFunction(iQuadCompare | iQuadIterator | iQuadIteratorAggregate | callable | bool $offset): callable {
+    private function prepareMatchFunction(iQuadCompare | iQuadIterator | iQuadIteratorAggregate | callable | bool | int $offset): callable {
         $fn = function () use ($offset) {
             return $offset;
         };
@@ -458,6 +452,11 @@ class Dataset implements iDataset, iDatasetMapReduce, iDatasetCompare, iDatasetL
                     }
                 }
                 return false;
+            };
+        } elseif (is_int($offset)) {
+            $fn = function (iQuad $x): bool {
+                static $n = 0;
+                return $n++ === 0;
             };
         }
         return $fn;
