@@ -29,7 +29,6 @@ namespace simpleRdf;
 use rdfInterface\TermInterface as iTerm;
 use rdfInterface\TermCompareInterface as iTermCompare;
 use rdfInterface\QuadCompareInterface as iQuadCompare;
-use rdfInterface\DatasetInterface as iDataset;
 
 /**
  * Description of TestTrait
@@ -63,11 +62,5 @@ trait TestTrait {
 
     public static function getRdfNamespace(): RdfNamespace {
         return new RdfNamespace();
-    }
-    
-    public static function getNode(iTerm $node, iDataset $dataset): Dataset {
-        $node = new Dataset($node);
-        $node->add($dataset);
-        return $node;
     }
 }
