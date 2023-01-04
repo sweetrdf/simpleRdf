@@ -81,26 +81,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/simpleRdf-Dataset.html#method___toString"
         },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AgetDataset\u0028\u0029",
-            "name": "getDataset",
-            "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_getDataset"
-        },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AgetTerm\u0028\u0029",
-            "name": "getTerm",
-            "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_getTerm"
-        },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AwithDataset\u0028\u0029",
-            "name": "withDataset",
-            "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_withDataset"
-        },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AwithTerm\u0028\u0029",
-            "name": "withTerm",
-            "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_withTerm"
-        },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Aequals\u0028\u0029",
             "name": "equals",
             "summary": "",
@@ -260,11 +240,6 @@ Search.appendIndex(
             "name": "checkIteratorEnd",
             "summary": "",
             "url": "classes/simpleRdf-Dataset.html#method_checkIteratorEnd"
-        },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003A\u0024node",
-            "name": "node",
-            "summary": "Used\u0020only\u0020for\u0020the\u0020rdfInterface\\NodeInterface\u0020implementation",
-            "url": "classes/simpleRdf-Dataset.html#property_node"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003A\u0024quads",
             "name": "quads",
