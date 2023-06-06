@@ -98,10 +98,10 @@
 
     <article class="phpdocumentor-element -interface">
         <h2 class="phpdocumentor-content__title">
-    DatasetMapReduceInterface
+    DatasetNodeCompareInterface
             <span class="phpdocumentor-element__extends">
             extends
-                            <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>                    </span>
+                            <a href="classes/rdfInterface-DatasetNodeInterface.html"><abbr title="\rdfInterface\DatasetNodeInterface">DatasetNodeInterface</abbr></a>,                             <a href="classes/rdfInterface-DatasetCompareInterface.html"><abbr title="\rdfInterface\DatasetCompareInterface">DatasetCompareInterface</abbr></a>                    </span>
                 <div class="phpdocumentor-element__package">
             in
             <ul class="phpdocumentor-breadcrumbs">
@@ -111,19 +111,19 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetMapReduceInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetmapreduceinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetMapReduceInterface.php">DatasetMapReduceInterface.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetNodeCompareInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetnodecompareinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetNodeCompareInterface.php">DatasetNodeCompareInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">Immutable edge processing methods</p>
+            <p class="phpdocumentor-summary">Node-oriented graph API interface.</p>
 
 
 
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="classes/rdfInterface-DatasetMapReduceInterface.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/rdfInterface-DatasetNodeCompareInterface.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h5>
     <dl class="phpdocumentor-tag-list">
@@ -142,7 +142,7 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/rdfInterface-DatasetMapReduceInterface.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/rdfInterface-DatasetNodeCompareInterface.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -157,7 +157,7 @@
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/rdfInterface-DatasetMapReduceInterface.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/rdfInterface-DatasetNodeCompareInterface.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
@@ -173,6 +173,12 @@
                                 &nbsp;: void    </span>
 </dt>
 <dd>Adds quad(s) to the dataset.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-DatasetCompareInterface.html#method_any">any()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/rdfInterface-DatasetInterface.html#method_copy">copy()</a>
@@ -209,11 +215,30 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-DatasetCompareInterface.html#method_every">every()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-DatasetNodeInterface.html#method_factory">factory()</a>
+    <span>
+                                &nbsp;: <a href="classes/rdfInterface-DatasetNodeInterface.html"><abbr title="\rdfInterface\DatasetNodeInterface">DatasetNodeInterface</abbr></a>    </span>
+</dt>
+<dd>The $node doesn&#039;t have to exist in the $dataset.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/rdfInterface-DatasetInterface.html#method_forEach">forEach()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd>Iterates trough all quads replacing them with a callback result.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-DatasetNodeInterface.html#method_getDataset">getDataset()</a>
+    <span>
+                                &nbsp;: <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>    </span>
+</dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/rdfInterface-QuadIteratorAggregateInterface.html#method_getIterator">getIterator()</a>
@@ -223,9 +248,21 @@
 <dd>Returns QuadIteratorInterface iterating over dataset&#039;s quads.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfInterface-DatasetMapReduceInterface.html#method_map">map()</a>
+    <a href="classes/rdfInterface-DatasetNodeInterface.html#method_getNode">getNode()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfInterface-DatasetMapReduceInterface.html"><abbr title="\rdfInterface\DatasetMapReduceInterface">DatasetMapReduceInterface</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-TermInterface.html#method_getValue">getValue()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/rdfInterface-DatasetCompareInterface.html#method_none">none()</a>
+    <span>
+                                &nbsp;: bool    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -257,12 +294,6 @@
 <dd>Removes a quad matching the $offset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfInterface-DatasetMapReduceInterface.html#method_reduce">reduce()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/rdfInterface-DatasetInterface.html#method_union">union()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>    </span>
@@ -287,7 +318,7 @@ the $other one.</dd>
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/rdfInterface-DatasetMapReduceInterface.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/rdfInterface-DatasetNodeCompareInterface.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -362,6 +393,51 @@ the $other one.</dd>
     
 
     
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_any">
+        any()
+        <a href="classes/rdfInterface-DatasetCompareInterface.html#method_any" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetCompareInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetcompareinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetCompareInterface.php">DatasetCompareInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">39</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">any</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -715,6 +791,106 @@ All quads for which the callable returns true are copied.</li>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_every">
+        every()
+        <a href="classes/rdfInterface-DatasetCompareInterface.html#method_every" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetCompareInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetcompareinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetCompareInterface.php">DatasetCompareInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">35</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">every</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$filter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_factory">
+        factory()
+        <a href="classes/rdfInterface-DatasetNodeInterface.html#method_factory" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetNodeInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetnodeinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetNodeInterface.php">DatasetNodeInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">47</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The $node doesn&#039;t have to exist in the $dataset.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">factory</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$node</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$dataset</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-DatasetNodeInterface.html"><abbr title="\rdfInterface\DatasetNodeInterface">DatasetNodeInterface</abbr></a></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p>If $dataset is not provided, an empty dataset should be used.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$node</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$dataset</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-DatasetNodeInterface.html"><abbr title="\rdfInterface\DatasetNodeInterface">DatasetNodeInterface</abbr></a></span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_forEach">
         forEach()
         <a href="classes/rdfInterface-DatasetInterface.html#method_forEach" class="headerlink"><i class="fas fa-link"></i></a>
@@ -762,6 +938,41 @@ an all quads</p>
     
 
     
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getDataset">
+        getDataset()
+        <a href="classes/rdfInterface-DatasetNodeInterface.html#method_getDataset" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetNodeInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetnodeinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetNodeInterface.php">DatasetNodeInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">50</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getDataset</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a></span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -827,22 +1038,88 @@ All quads for which the callable returns true are copied.</li>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_map">
-        map()
-        <a href="classes/rdfInterface-DatasetMapReduceInterface.html#method_map" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getNode">
+        getNode()
+        <a href="classes/rdfInterface-DatasetNodeInterface.html#method_getNode" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetMapReduceInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetmapreduceinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetMapReduceInterface.php">DatasetMapReduceInterface.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetNodeInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetnodeinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetNodeInterface.php">DatasetNodeInterface.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">42</span>
+    <span class="phpdocumentor-element-found-in__line">52</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">map</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-DatasetMapReduceInterface.html"><abbr title="\rdfInterface\DatasetMapReduceInterface">DatasetMapReduceInterface</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">getNode</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getValue">
+        getValue()
+        <a href="classes/rdfInterface-TermInterface.html#method_getValue" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/TermInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-terminterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/TermInterface.php">TermInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">36</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getValue</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_none">
+        none()
+        <a href="classes/rdfInterface-DatasetCompareInterface.html#method_none" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetCompareInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetcompareinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetCompareInterface.php">DatasetCompareInterface.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">37</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">none</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -850,18 +1127,9 @@ All quads for which the callable returns true are copied.</li>
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$fn</span>
-                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>function applied to every quad with signature <code class="prettyprint">fn(quad, dataset)</code></p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$filter</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+                            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
@@ -871,7 +1139,7 @@ All quads for which the callable returns true are copied.</li>
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-DatasetMapReduceInterface.html"><abbr title="\rdfInterface\DatasetMapReduceInterface">DatasetMapReduceInterface</abbr></a></span>
+        <span class="phpdocumentor-signature__response_type">bool</span>
             </section>
 
 </article>
@@ -1168,64 +1436,6 @@ thrown.</li>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_reduce">
-        reduce()
-        <a href="classes/rdfInterface-DatasetMapReduceInterface.html#method_reduce" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetMapReduceInterface.php"><a href="files/vendor-sweetrdf-rdf-interface-src-rdfinterface-datasetmapreduceinterface.html"><abbr title="vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetMapReduceInterface.php">DatasetMapReduceInterface.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">52</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">reduce</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$initialValue</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$fn</span>
-                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>aggregate function with signature <code class="prettyprint">fn(accumulator, quad, dataset)</code>
-applied on each quad and returns last callback result</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$initialValue</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$filter</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_union">
         union()
         <a href="classes/rdfInterface-DatasetInterface.html#method_union" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1338,7 +1548,7 @@ the $other one.</p>
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetMapReduceInterface.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/vendor/sweetrdf/rdf-interface/src/rdfInterface/DatasetNodeCompareInterface.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -1437,8 +1647,8 @@ the $other one.</p>
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                    <li><a href="classes/rdfInterface-DatasetMapReduceInterface.html#toc-constants">Constants</a></li>
-                    <li><a href="classes/rdfInterface-DatasetMapReduceInterface.html#toc-methods">Methods</a></li>
+                    <li><a href="classes/rdfInterface-DatasetNodeCompareInterface.html#toc-constants">Constants</a></li>
+                    <li><a href="classes/rdfInterface-DatasetNodeCompareInterface.html#toc-methods">Methods</a></li>
                 </ul>
             </li>
                             <li class="phpdocumentor-on-this-page-section__title">Methods</li>
@@ -1446,19 +1656,24 @@ the $other one.</p>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method___construct">__construct()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_add">add()</a></li>
+                                                    <li><a href="classes/rdfInterface-DatasetCompareInterface.html#method_any">any()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_copy">copy()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_copyExcept">copyExcept()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_delete">delete()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_deleteExcept">deleteExcept()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_equals">equals()</a></li>
+                                                    <li><a href="classes/rdfInterface-DatasetCompareInterface.html#method_every">every()</a></li>
+                                                    <li><a href="classes/rdfInterface-DatasetNodeInterface.html#method_factory">factory()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_forEach">forEach()</a></li>
+                                                    <li><a href="classes/rdfInterface-DatasetNodeInterface.html#method_getDataset">getDataset()</a></li>
                                                     <li><a href="classes/rdfInterface-QuadIteratorAggregateInterface.html#method_getIterator">getIterator()</a></li>
-                                                    <li><a href="classes/rdfInterface-DatasetMapReduceInterface.html#method_map">map()</a></li>
+                                                    <li><a href="classes/rdfInterface-DatasetNodeInterface.html#method_getNode">getNode()</a></li>
+                                                    <li><a href="classes/rdfInterface-TermInterface.html#method_getValue">getValue()</a></li>
+                                                    <li><a href="classes/rdfInterface-DatasetCompareInterface.html#method_none">none()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_offsetExists">offsetExists()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_offsetGet">offsetGet()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_offsetSet">offsetSet()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_offsetUnset">offsetUnset()</a></li>
-                                                    <li><a href="classes/rdfInterface-DatasetMapReduceInterface.html#method_reduce">reduce()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_union">union()</a></li>
                                                     <li><a href="classes/rdfInterface-DatasetInterface.html#method_xor">xor()</a></li>
                                             </ul>
@@ -1481,7 +1696,7 @@ the $other one.</p>
     </section>
 </section>
         </div>
-        <a href="classes/rdfInterface-DatasetMapReduceInterface.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/rdfInterface-DatasetNodeCompareInterface.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

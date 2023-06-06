@@ -43,27 +43,27 @@ Search.appendIndex(
         },                {
             "fqsen": "\\simpleRdf\\DataFactory\u003A\u003AblankNode\u0028\u0029",
             "name": "blankNode",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020RDF\u0020blank\u0020node.",
             "url": "classes/simpleRdf-DataFactory.html#method_blankNode"
         },                {
             "fqsen": "\\simpleRdf\\DataFactory\u003A\u003AnamedNode\u0028\u0029",
             "name": "namedNode",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020RDF\u0020named\u0020node.",
             "url": "classes/simpleRdf-DataFactory.html#method_namedNode"
         },                {
             "fqsen": "\\simpleRdf\\DataFactory\u003A\u003AdefaultGraph\u0028\u0029",
             "name": "defaultGraph",
-            "summary": "",
+            "summary": "Returns\u0020an\u0020RDF\u0020default\u0020graph\u0020object.",
             "url": "classes/simpleRdf-DataFactory.html#method_defaultGraph"
         },                {
             "fqsen": "\\simpleRdf\\DataFactory\u003A\u003Aliteral\u0028\u0029",
             "name": "literal",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020RDF\u0020literal.",
             "url": "classes/simpleRdf-DataFactory.html#method_literal"
         },                {
             "fqsen": "\\simpleRdf\\DataFactory\u003A\u003Aquad\u0028\u0029",
             "name": "quad",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020RDF\u0020quad.",
             "url": "classes/simpleRdf-DataFactory.html#method_quad"
         },                {
             "fqsen": "\\simpleRdf\\Dataset",
@@ -253,7 +253,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\simpleRdf\\Literal\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Creates\u0020a\u0020new\u0020literal.",
+            "summary": "",
             "url": "classes/simpleRdf-Literal.html#method___construct"
         },                {
             "fqsen": "\\simpleRdf\\Literal\u003A\u003A__toString\u0028\u0029",
@@ -651,11 +651,6 @@ Search.appendIndex(
             "summary": "Description\u0020of\u0020RdfTerm",
             "url": "classes/rdfInterface-BlankNodeInterface.html"
         },                {
-            "fqsen": "\\rdfInterface\\BlankNodeInterface\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/rdfInterface-BlankNodeInterface.html#method___construct"
-        },                {
             "fqsen": "\\rdfInterface\\DataFactoryInterface",
             "name": "DataFactoryInterface",
             "summary": "",
@@ -663,27 +658,27 @@ Search.appendIndex(
         },                {
             "fqsen": "\\rdfInterface\\DataFactoryInterface\u003A\u003AnamedNode\u0028\u0029",
             "name": "namedNode",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020RDF\u0020named\u0020node.",
             "url": "classes/rdfInterface-DataFactoryInterface.html#method_namedNode"
         },                {
             "fqsen": "\\rdfInterface\\DataFactoryInterface\u003A\u003AblankNode\u0028\u0029",
             "name": "blankNode",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020RDF\u0020blank\u0020node.",
             "url": "classes/rdfInterface-DataFactoryInterface.html#method_blankNode"
         },                {
             "fqsen": "\\rdfInterface\\DataFactoryInterface\u003A\u003Aliteral\u0028\u0029",
             "name": "literal",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020RDF\u0020literal.",
             "url": "classes/rdfInterface-DataFactoryInterface.html#method_literal"
         },                {
             "fqsen": "\\rdfInterface\\DataFactoryInterface\u003A\u003AdefaultGraph\u0028\u0029",
             "name": "defaultGraph",
-            "summary": "",
+            "summary": "Returns\u0020an\u0020RDF\u0020default\u0020graph\u0020object.",
             "url": "classes/rdfInterface-DataFactoryInterface.html#method_defaultGraph"
         },                {
             "fqsen": "\\rdfInterface\\DataFactoryInterface\u003A\u003Aquad\u0028\u0029",
             "name": "quad",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020new\u0020RDF\u0020quad.",
             "url": "classes/rdfInterface-DataFactoryInterface.html#method_quad"
         },                {
             "fqsen": "\\rdfInterface\\DatasetCompareInterface",
@@ -715,11 +710,6 @@ Search.appendIndex(
             "name": "__construct",
             "summary": "",
             "url": "classes/rdfInterface-DatasetInterface.html#method___construct"
-        },                {
-            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003A__toString\u0028\u0029",
-            "name": "__toString",
-            "summary": "",
-            "url": "classes/rdfInterface-DatasetInterface.html#method___toString"
         },                {
             "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003Aequals\u0028\u0029",
             "name": "equals",
@@ -826,6 +816,41 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/rdfInterface-DatasetMapReduceInterface.html#method_reduce"
         },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeCompareInterface",
+            "name": "DatasetNodeCompareInterface",
+            "summary": "Node\u002Doriented\u0020graph\u0020API\u0020interface.",
+            "url": "classes/rdfInterface-DatasetNodeCompareInterface.html"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface",
+            "name": "DatasetNodeInterface",
+            "summary": "Node\u002Doriented\u0020graph\u0020API\u0020interface.",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Afactory\u0028\u0029",
+            "name": "factory",
+            "summary": "The\u0020\u0024node\u0020doesn\u0027t\u0020have\u0020to\u0020exist\u0020in\u0020the\u0020\u0024dataset.",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_factory"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003AgetDataset\u0028\u0029",
+            "name": "getDataset",
+            "summary": "",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_getDataset"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003AgetNode\u0028\u0029",
+            "name": "getNode",
+            "summary": "",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_getNode"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeListQuadPartsInterface",
+            "name": "DatasetNodeListQuadPartsInterface",
+            "summary": "Node\u002Doriented\u0020graph\u0020API\u0020interface.",
+            "url": "classes/rdfInterface-DatasetNodeListQuadPartsInterface.html"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeMapReduceInterface",
+            "name": "DatasetNodeMapReduceInterface",
+            "summary": "Node\u002Doriented\u0020graph\u0020API\u0020interface.",
+            "url": "classes/rdfInterface-DatasetNodeMapReduceInterface.html"
+        },                {
             "fqsen": "\\rdfInterface\\DefaultGraphInterface",
             "name": "DefaultGraphInterface",
             "summary": "Description\u0020of\u0020RdfTerm",
@@ -840,11 +865,6 @@ Search.appendIndex(
             "name": "LiteralInterface",
             "summary": "Description\u0020of\u0020RdfTerm",
             "url": "classes/rdfInterface-LiteralInterface.html"
-        },                {
-            "fqsen": "\\rdfInterface\\LiteralInterface\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "Creates\u0020a\u0020new\u0020literal.",
-            "url": "classes/rdfInterface-LiteralInterface.html#method___construct"
         },                {
             "fqsen": "\\rdfInterface\\LiteralInterface\u003A\u003AgetValue\u0028\u0029",
             "name": "getValue",
@@ -891,11 +911,6 @@ Search.appendIndex(
             "summary": "Description\u0020of\u0020RdfTerm",
             "url": "classes/rdfInterface-NamedNodeInterface.html"
         },                {
-            "fqsen": "\\rdfInterface\\NamedNodeInterface\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/rdfInterface-NamedNodeInterface.html#method___construct"
-        },                {
             "fqsen": "\\rdfInterface\\ParserInterface",
             "name": "ParserInterface",
             "summary": "",
@@ -921,11 +936,6 @@ Search.appendIndex(
             "summary": "Interface\u0020allowing\u0020to\u0020compare\u0020Quads.",
             "url": "classes/rdfInterface-QuadCompareInterface.html"
         },                {
-            "fqsen": "\\rdfInterface\\QuadCompareInterface\u003A\u003A__toString\u0028\u0029",
-            "name": "__toString",
-            "summary": "",
-            "url": "classes/rdfInterface-QuadCompareInterface.html#method___toString"
-        },                {
             "fqsen": "\\rdfInterface\\QuadCompareInterface\u003A\u003AgetSubject\u0028\u0029",
             "name": "getSubject",
             "summary": "",
@@ -950,11 +960,6 @@ Search.appendIndex(
             "name": "QuadInterface",
             "summary": "Extends\u0020Term\u0020because\u0020of\u0020RDF\u002A",
             "url": "classes/rdfInterface-QuadInterface.html"
-        },                {
-            "fqsen": "\\rdfInterface\\QuadInterface\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/rdfInterface-QuadInterface.html#method___construct"
         },                {
             "fqsen": "\\rdfInterface\\QuadInterface\u003A\u003AgetSubject\u0028\u0029",
             "name": "getSubject",
@@ -1081,30 +1086,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/rdfInterface-TermCompareInterface.html#method_equals"
         },                {
-            "fqsen": "\\rdfInterface\\TermCompareInterface\u003A\u003A__toString\u0028\u0029",
-            "name": "__toString",
-            "summary": "",
-            "url": "classes/rdfInterface-TermCompareInterface.html#method___toString"
-        },                {
             "fqsen": "\\rdfInterface\\TermInterface",
             "name": "TermInterface",
             "summary": "Description\u0020of\u0020RdfTerm",
             "url": "classes/rdfInterface-TermInterface.html"
         },                {
-            "fqsen": "\\rdfInterface\\TermInterface\u003A\u003A__toString\u0028\u0029",
-            "name": "__toString",
-            "summary": "",
-            "url": "classes/rdfInterface-TermInterface.html#method___toString"
-        },                {
             "fqsen": "\\rdfInterface\\TermInterface\u003A\u003AgetValue\u0028\u0029",
             "name": "getValue",
             "summary": "",
             "url": "classes/rdfInterface-TermInterface.html#method_getValue"
-        },                {
-            "fqsen": "\\rdfInterface\\TermInterface\u003A\u003Aequals\u0028\u0029",
-            "name": "equals",
-            "summary": "",
-            "url": "classes/rdfInterface-TermInterface.html#method_equals"
         },                {
             "fqsen": "\\rdfInterface\\TermIteratorInterface",
             "name": "TermIteratorInterface",
