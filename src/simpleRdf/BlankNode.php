@@ -26,23 +26,18 @@
 
 namespace simpleRdf;
 
-use rdfInterface\BlankNodeInterface as iBlankNode;
-use rdfInterface\TermInterface as iTerm;
+use rdfInterface\BlankNodeInterface;
+use rdfInterface\TermCompareInterface;
 
 /**
  * Description of BlankNode
  *
  * @author zozlak
  */
-class BlankNode implements iBlankNode {
+class BlankNode implements BlankNodeInterface {
 
     private static int $n = 0;
-
-    /**
-     *
-     * @var string
-     */
-    private $id;
+    private string $id;
 
     public function __construct(?string $id = null) {
         if (empty($id)) {
@@ -59,8 +54,8 @@ class BlankNode implements iBlankNode {
         return $this->id;
     }
 
-    public function equals(iTerm $term): bool {
-        return $term instanceof iBlankNode && $this->getValue() == $term->getValue();
+    public function equals(TermCompareInterface $term): bool {
+        return $term instanceof BlankNodeInterface && $this->getValue() == $term->getValue();
     }
 
     public function getValue(): string {

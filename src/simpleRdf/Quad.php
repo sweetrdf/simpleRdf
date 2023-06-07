@@ -27,12 +27,13 @@
 namespace simpleRdf;
 
 use BadMethodCallException;
-use rdfInterface\NamedNodeInterface as iNamedNode;
-use rdfInterface\BlankNodeInterface as iBlankNode;
-use rdfInterface\DefaultGraphInterface as iDefaultGraph;
-use rdfInterface\LiteralInterface as iLiteral;
-use rdfInterface\TermInterface as iTerm;
-use rdfInterface\QuadInterface as iQuad;
+use rdfInterface\NamedNodeInterface;
+use rdfInterface\BlankNodeInterface;
+use rdfInterface\DefaultGraphInterface;
+use rdfInterface\LiteralInterface;
+use rdfInterface\TermInterface;
+use rdfInterface\TermCompareInterface;
+use rdfInterface\QuadInterface;
 use simpleRdf\DataFactory as DF;
 
 /**
@@ -40,18 +41,18 @@ use simpleRdf\DataFactory as DF;
  *
  * @author zozlak
  */
-class Quad implements iQuad {
+class Quad implements QuadInterface {
 
-    private iTerm $subject;
-    private iNamedNode $predicate;
-    private iTerm $object;
-    private iNamedNode | iBlankNode | iDefaultGraph $graph;
+    private TermInterface $subject;
+    private NamedNodeInterface $predicate;
+    private TermInterface $object;
+    private NamedNodeInterface | BlankNodeInterface | DefaultGraphInterface $graph;
 
     public function __construct(
-        iTerm $subject, iNamedNode $predicate, iTerm $object,
-        iNamedNode | iBlankNode | iDefaultGraph | null $graph = null
+        TermInterface $subject, NamedNodeInterface $predicate, TermInterface $object,
+        NamedNodeInterface | BlankNodeInterface | DefaultGraphInterface | null $graph = null
     ) {
-        if ($subject instanceof iLiteral) {
+        if ($subject instanceof LiteralInterface) {
             throw new BadMethodCallException("subject can't be a literal");
         }
         $this->subject   = $subject;
@@ -64,19 +65,19 @@ class Quad implements iQuad {
         $sbj   = (string) $this->subject;
         $pred  = (string) $this->predicate;
         $obj   = (string) $this->object;
-        $graph = $this->graph instanceof iDefaultGraph ? '' : (string) $this->graph;
-        if ($this->subject instanceof iQuad) {
+        $graph = $this->graph instanceof DefaultGraphInterface ? '' : (string) $this->graph;
+        if ($this->subject instanceof QuadInterface) {
             $sbj = "<< $sbj >>";
         }
-        if ($this->object instanceof iQuad) {
+        if ($this->object instanceof QuadInterface) {
             $obj = "<< $obj >>";
         }
         return rtrim("$sbj $pred $obj $graph");
     }
 
-    public function equals(iTerm $term): bool {
-        if ($term instanceof iQuad) {
-            /* @var $term iQuad */
+    public function equals(TermCompareInterface $term): bool {
+        if ($term instanceof QuadInterface) {
+            /* @var $term QuadInterface */
             return $this->subject->equals($term->getSubject()) &&
                 $this->predicate->equals($term->getPredicate()) &&
                 $this->object->equals($term->getObject()) &&
@@ -90,35 +91,35 @@ class Quad implements iQuad {
         throw new BadMethodCallException();
     }
 
-    public function getSubject(): iTerm {
+    public function getSubject(): TermInterface {
         return $this->subject;
     }
 
-    public function getPredicate(): iNamedNode {
+    public function getPredicate(): NamedNodeInterface {
         return $this->predicate;
     }
 
-    public function getObject(): iTerm {
+    public function getObject(): TermInterface {
         return $this->object;
     }
 
-    public function getGraph(): iNamedNode | iBlankNode | iDefaultGraph {
+    public function getGraph(): NamedNodeInterface | BlankNodeInterface | DefaultGraphInterface {
         return $this->graph;
     }
 
-    public function withSubject(iTerm $subject): iQuad {
+    public function withSubject(TermInterface $subject): QuadInterface {
         return DF::quad($subject, $this->predicate, $this->object, $this->graph);
     }
 
-    public function withPredicate(iNamedNode $predicate): iQuad {
+    public function withPredicate(NamedNodeInterface $predicate): QuadInterface {
         return DF::quad($this->subject, $predicate, $this->object, $this->graph);
     }
 
-    public function withObject(iTerm $object): iQuad {
+    public function withObject(TermInterface $object): QuadInterface {
         return DF::quad($this->subject, $this->predicate, $object, $this->graph);
     }
 
-    public function withGraph(iNamedNode | iBlankNode | iDefaultGraph | null $graph): iQuad {
+    public function withGraph(NamedNodeInterface | BlankNodeInterface | DefaultGraphInterface | null $graph): QuadInterface {
         return DF::quad($this->subject, $this->predicate, $this->object, $graph);
     }
 }

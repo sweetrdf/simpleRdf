@@ -26,21 +26,17 @@
 
 namespace simpleRdf;
 
-use rdfInterface\NamedNodeInterface as iNamedNode;
-use rdfInterface\TermInterface as iTerm;
+use rdfInterface\NamedNodeInterface;
+use rdfInterface\TermCompareInterface;
 
 /**
  * Description of Iri
  *
  * @author zozlak
  */
-class NamedNode implements iNamedNode {
+class NamedNode implements NamedNodeInterface {
 
-    /**
-     *
-     * @var string
-     */
-    private $iri;
+    private string $iri;
 
     public function __construct(string $iri) {
         $this->iri = $iri;
@@ -54,7 +50,7 @@ class NamedNode implements iNamedNode {
         return $this->iri;
     }
 
-    public function equals(iTerm $term): bool {
-        return $term instanceof iNamedNode && $this->getValue() === $term->getValue();
+    public function equals(TermCompareInterface $term): bool {
+        return $term instanceof NamedNodeInterface && $this->getValue() === $term->getValue();
     }
 }
