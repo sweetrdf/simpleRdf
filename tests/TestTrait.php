@@ -46,11 +46,11 @@ trait TestTrait {
     }
 
     public static function getDataset(): Dataset {
-        return new Dataset();
+        return Dataset::factory();
     }
 
     public static function getForeignDataset(): Dataset {
-        return new Dataset();
+        return Dataset::factory();
     }
 
     public static function getQuadTemplate(iTermCompare | iTerm | null $subject = null,
