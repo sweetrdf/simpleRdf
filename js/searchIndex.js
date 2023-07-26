@@ -183,37 +183,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Aany\u0028\u0029",
             "name": "any",
-            "summary": "",
+            "summary": "Checks\u0020if\u0020any\u0020quad\u0020in\u0020the\u0020dataset\u0020matches\u0020a\u0020given\u0020filter.",
             "url": "classes/simpleRdf-Dataset.html#method_any"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Aevery\u0028\u0029",
             "name": "every",
-            "summary": "",
+            "summary": "Checks\u0020if\u0020all\u0020quads\u0020in\u0020the\u0020dataset\u0020match\u0020a\u0020given\u0020filter.",
             "url": "classes/simpleRdf-Dataset.html#method_every"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Anone\u0028\u0029",
             "name": "none",
-            "summary": "",
+            "summary": "Checks\u0020if\u0020no\u0020quad\u0020in\u0020the\u0020dataset\u0020matches\u0020a\u0020given\u0020filter.",
             "url": "classes/simpleRdf-Dataset.html#method_none"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistSubjects\u0028\u0029",
             "name": "listSubjects",
-            "summary": "",
+            "summary": "Fetches\u0020an\u0020iterator\u0020over\u0020unique\u0020set\u0020of\u0020dataset\u0020quad\u0020subjects.",
             "url": "classes/simpleRdf-Dataset.html#method_listSubjects"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistPredicates\u0028\u0029",
             "name": "listPredicates",
-            "summary": "",
+            "summary": "Fetches\u0020an\u0020iterator\u0020over\u0020unique\u0020set\u0020of\u0020dataset\u0020quad\u0020predicates.",
             "url": "classes/simpleRdf-Dataset.html#method_listPredicates"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistObjects\u0028\u0029",
             "name": "listObjects",
-            "summary": "",
+            "summary": "Fetches\u0020an\u0020iterator\u0020over\u0020unique\u0020set\u0020of\u0020dataset\u0020quad\u0020objects.",
             "url": "classes/simpleRdf-Dataset.html#method_listObjects"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistGraphs\u0028\u0029",
             "name": "listGraphs",
-            "summary": "",
+            "summary": "Fetches\u0020an\u0020iterator\u0020over\u0020unique\u0020set\u0020of\u0020dataset\u0020quad\u0020graphs.",
             "url": "classes/simpleRdf-Dataset.html#method_listGraphs"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003AlistQuadElement\u0028\u0029",
@@ -681,26 +681,6 @@ Search.appendIndex(
             "summary": "Creates\u0020a\u0020new\u0020RDF\u0020quad.",
             "url": "classes/rdfInterface-DataFactoryInterface.html#method_quad"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetCompareInterface",
-            "name": "DatasetCompareInterface",
-            "summary": "Main,\u0020edge\u0028quad\u0029\u0020and\u0020Dataset\u002Doriented\u0020Dataset\u0020API",
-            "url": "classes/rdfInterface-DatasetCompareInterface.html"
-        },                {
-            "fqsen": "\\rdfInterface\\DatasetCompareInterface\u003A\u003Aevery\u0028\u0029",
-            "name": "every",
-            "summary": "",
-            "url": "classes/rdfInterface-DatasetCompareInterface.html#method_every"
-        },                {
-            "fqsen": "\\rdfInterface\\DatasetCompareInterface\u003A\u003Anone\u0028\u0029",
-            "name": "none",
-            "summary": "",
-            "url": "classes/rdfInterface-DatasetCompareInterface.html#method_none"
-        },                {
-            "fqsen": "\\rdfInterface\\DatasetCompareInterface\u003A\u003Aany\u0028\u0029",
-            "name": "any",
-            "summary": "",
-            "url": "classes/rdfInterface-DatasetCompareInterface.html#method_any"
-        },                {
             "fqsen": "\\rdfInterface\\DatasetInterface",
             "name": "DatasetInterface",
             "summary": "Main,\u0020edge\u0028quad\u0029\u0020and\u0020Dataset\u002Doriented\u0020Dataset\u0020API",
@@ -776,50 +756,50 @@ Search.appendIndex(
             "summary": "Removes\u0020a\u0020quad\u0020matching\u0020the\u0020\u0024offset.",
             "url": "classes/rdfInterface-DatasetInterface.html#method_offsetUnset"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetListQuadPartsInterface",
-            "name": "DatasetListQuadPartsInterface",
-            "summary": "Set\u0020of\u0020methods\u0020for\u0020listing\u0020distinct\u0020Terms\u0020being\u0020used\u0020on\u0020a\u0020given\u0020position\nof\u0020dataset\u0020quads.",
-            "url": "classes/rdfInterface-DatasetListQuadPartsInterface.html"
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003Aevery\u0028\u0029",
+            "name": "every",
+            "summary": "Checks\u0020if\u0020all\u0020quads\u0020in\u0020the\u0020dataset\u0020match\u0020a\u0020given\u0020filter.",
+            "url": "classes/rdfInterface-DatasetInterface.html#method_every"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetListQuadPartsInterface\u003A\u003AlistSubjects\u0028\u0029",
-            "name": "listSubjects",
-            "summary": "",
-            "url": "classes/rdfInterface-DatasetListQuadPartsInterface.html#method_listSubjects"
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003Anone\u0028\u0029",
+            "name": "none",
+            "summary": "Checks\u0020if\u0020no\u0020quad\u0020in\u0020the\u0020dataset\u0020matches\u0020a\u0020given\u0020filter.",
+            "url": "classes/rdfInterface-DatasetInterface.html#method_none"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetListQuadPartsInterface\u003A\u003AlistPredicates\u0028\u0029",
-            "name": "listPredicates",
-            "summary": "",
-            "url": "classes/rdfInterface-DatasetListQuadPartsInterface.html#method_listPredicates"
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003Aany\u0028\u0029",
+            "name": "any",
+            "summary": "Checks\u0020if\u0020any\u0020quad\u0020in\u0020the\u0020dataset\u0020matches\u0020a\u0020given\u0020filter.",
+            "url": "classes/rdfInterface-DatasetInterface.html#method_any"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetListQuadPartsInterface\u003A\u003AlistObjects\u0028\u0029",
-            "name": "listObjects",
-            "summary": "",
-            "url": "classes/rdfInterface-DatasetListQuadPartsInterface.html#method_listObjects"
-        },                {
-            "fqsen": "\\rdfInterface\\DatasetListQuadPartsInterface\u003A\u003AlistGraphs\u0028\u0029",
-            "name": "listGraphs",
-            "summary": "",
-            "url": "classes/rdfInterface-DatasetListQuadPartsInterface.html#method_listGraphs"
-        },                {
-            "fqsen": "\\rdfInterface\\DatasetMapReduceInterface",
-            "name": "DatasetMapReduceInterface",
-            "summary": "Immutable\u0020edge\u0020processing\u0020methods",
-            "url": "classes/rdfInterface-DatasetMapReduceInterface.html"
-        },                {
-            "fqsen": "\\rdfInterface\\DatasetMapReduceInterface\u003A\u003Amap\u0028\u0029",
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003Amap\u0028\u0029",
             "name": "map",
             "summary": "",
-            "url": "classes/rdfInterface-DatasetMapReduceInterface.html#method_map"
+            "url": "classes/rdfInterface-DatasetInterface.html#method_map"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetMapReduceInterface\u003A\u003Areduce\u0028\u0029",
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003Areduce\u0028\u0029",
             "name": "reduce",
             "summary": "",
-            "url": "classes/rdfInterface-DatasetMapReduceInterface.html#method_reduce"
+            "url": "classes/rdfInterface-DatasetInterface.html#method_reduce"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetNodeCompareInterface",
-            "name": "DatasetNodeCompareInterface",
-            "summary": "Node\u002Doriented\u0020graph\u0020API\u0020interface.",
-            "url": "classes/rdfInterface-DatasetNodeCompareInterface.html"
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003AlistSubjects\u0028\u0029",
+            "name": "listSubjects",
+            "summary": "Fetches\u0020an\u0020iterator\u0020over\u0020unique\u0020set\u0020of\u0020dataset\u0020quad\u0020subjects.",
+            "url": "classes/rdfInterface-DatasetInterface.html#method_listSubjects"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003AlistPredicates\u0028\u0029",
+            "name": "listPredicates",
+            "summary": "Fetches\u0020an\u0020iterator\u0020over\u0020unique\u0020set\u0020of\u0020dataset\u0020quad\u0020predicates.",
+            "url": "classes/rdfInterface-DatasetInterface.html#method_listPredicates"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003AlistObjects\u0028\u0029",
+            "name": "listObjects",
+            "summary": "Fetches\u0020an\u0020iterator\u0020over\u0020unique\u0020set\u0020of\u0020dataset\u0020quad\u0020objects.",
+            "url": "classes/rdfInterface-DatasetInterface.html#method_listObjects"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003AlistGraphs\u0028\u0029",
+            "name": "listGraphs",
+            "summary": "Fetches\u0020an\u0020iterator\u0020over\u0020unique\u0020set\u0020of\u0020dataset\u0020quad\u0020graphs.",
+            "url": "classes/rdfInterface-DatasetInterface.html#method_listGraphs"
         },                {
             "fqsen": "\\rdfInterface\\DatasetNodeInterface",
             "name": "DatasetNodeInterface",
@@ -833,7 +813,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003AgetDataset\u0028\u0029",
             "name": "getDataset",
-            "summary": "",
+            "summary": "The\u0020actual\u0020dataset\u0020\u0028and\u0020not\u0020its\u0020copy\u0029\u0020should\u0020be\u0020returned.",
             "url": "classes/rdfInterface-DatasetNodeInterface.html#method_getDataset"
         },                {
             "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003AgetNode\u0028\u0029",
@@ -841,15 +821,45 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/rdfInterface-DatasetNodeInterface.html#method_getNode"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetNodeListQuadPartsInterface",
-            "name": "DatasetNodeListQuadPartsInterface",
-            "summary": "Node\u002Doriented\u0020graph\u0020API\u0020interface.",
-            "url": "classes/rdfInterface-DatasetNodeListQuadPartsInterface.html"
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003AwithDataset\u0028\u0029",
+            "name": "withDataset",
+            "summary": "",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_withDataset"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetNodeMapReduceInterface",
-            "name": "DatasetNodeMapReduceInterface",
-            "summary": "Node\u002Doriented\u0020graph\u0020API\u0020interface.",
-            "url": "classes/rdfInterface-DatasetNodeMapReduceInterface.html"
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003AwithNode\u0028\u0029",
+            "name": "withNode",
+            "summary": "",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_withNode"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Aequals\u0028\u0029",
+            "name": "equals",
+            "summary": "",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_equals"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Acopy\u0028\u0029",
+            "name": "copy",
+            "summary": "Creates\u0020a\u0020copy\u0020of\u0020the\u0020dataset.",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_copy"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003AcopyExcept\u0028\u0029",
+            "name": "copyExcept",
+            "summary": "Creates\u0020a\u0020copy\u0020of\u0020the\u0020dataset.",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_copyExcept"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Aunion\u0028\u0029",
+            "name": "union",
+            "summary": "Only\u0020triples\u0020with\u0020subject\u0020matching\u0020the\u0020DatasetNodeInterface\u0027s\u0020node\u0020are\u0020added.",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_union"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Axor\u0028\u0029",
+            "name": "xor",
+            "summary": "The\u0020resulting\u0020dataset\u0020should\u0020contain\u003A\n\u002D\u0020all\u0020triples\u0020of\u0020the\u0020DatasetNodeInterface\u0020with\u0020subject\u0020other\u0020than\u0020the\u0020node\n\u002D\u0020xor\u0020between\u0020triples\u0020of\u0020the\u0020DatasetNodeInterface\u0020with\u0020subject\u0020being\u0020the\u0020node\n\u0020\u0020and\u0020triples\u0020of\u0020the\u0020\u0024other\u0020with\u0020subject\u0020being\u0020the\u0020node",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_xor"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Amap\u0028\u0029",
+            "name": "map",
+            "summary": "Triples\u0020with\u0020subject\u0020other\u0020than\u0020DatasetNodeInterface\u0027s\u0020node\u0020should\u0020be\nreturned\u0020untouched.",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_map"
         },                {
             "fqsen": "\\rdfInterface\\DefaultGraphInterface",
             "name": "DefaultGraphInterface",
