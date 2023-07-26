@@ -71,10 +71,10 @@ Search.appendIndex(
             "summary": "Description\u0020of\u0020Graph",
             "url": "classes/simpleRdf-Dataset.html"
         },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003Afactory\u0028\u0029",
+            "name": "factory",
             "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method___construct"
+            "url": "classes/simpleRdf-Dataset.html#method_factory"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
@@ -686,10 +686,10 @@ Search.appendIndex(
             "summary": "Main,\u0020edge\u0028quad\u0029\u0020and\u0020Dataset\u002Doriented\u0020Dataset\u0020API",
             "url": "classes/rdfInterface-DatasetInterface.html"
         },                {
-            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
+            "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003Afactory\u0028\u0029",
+            "name": "factory",
             "summary": "",
-            "url": "classes/rdfInterface-DatasetInterface.html#method___construct"
+            "url": "classes/rdfInterface-DatasetInterface.html#method_factory"
         },                {
             "fqsen": "\\rdfInterface\\DatasetInterface\u003A\u003Aequals\u0028\u0029",
             "name": "equals",
@@ -808,7 +808,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Afactory\u0028\u0029",
             "name": "factory",
-            "summary": "The\u0020\u0024node\u0020doesn\u0027t\u0020have\u0020to\u0020exist\u0020in\u0020the\u0020\u0024dataset.",
+            "summary": "Creates\u0020a\u0020DatasetNodeInterface\u0020object.",
             "url": "classes/rdfInterface-DatasetNodeInterface.html#method_factory"
         },                {
             "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003AgetDataset\u0028\u0029",
@@ -836,6 +836,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/rdfInterface-DatasetNodeInterface.html#method_equals"
         },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Aadd\u0028\u0029",
+            "name": "add",
+            "summary": "Adds\u0020quad\u0028s\u0029\u0020to\u0020the\u0020dataset.",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_add"
+        },                {
+            "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003AoffsetSet\u0028\u0029",
+            "name": "offsetSet",
+            "summary": "Assigns\u0020a\u0020new\u0020value\u0020to\u0020the\u0020quad\u0020matching\u0020the\u0020\u0024offset.",
+            "url": "classes/rdfInterface-DatasetNodeInterface.html#method_offsetSet"
+        },                {
             "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Acopy\u0028\u0029",
             "name": "copy",
             "summary": "Creates\u0020a\u0020copy\u0020of\u0020the\u0020dataset.",
@@ -848,17 +858,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Aunion\u0028\u0029",
             "name": "union",
-            "summary": "Only\u0020triples\u0020with\u0020subject\u0020matching\u0020the\u0020DatasetNodeInterface\u0027s\u0020node\u0020are\u0020added.",
+            "summary": "Only\u0020those\u0020quads\u0020from\u0020\u0024other\u0020which\u0020have\u0020subject\u0020matching\u0020the\u0020DatasetNodeInterface\u0027s\u0020node\u0020are\u0020added.",
             "url": "classes/rdfInterface-DatasetNodeInterface.html#method_union"
         },                {
             "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Axor\u0028\u0029",
             "name": "xor",
-            "summary": "The\u0020resulting\u0020dataset\u0020should\u0020contain\u003A\n\u002D\u0020all\u0020triples\u0020of\u0020the\u0020DatasetNodeInterface\u0020with\u0020subject\u0020other\u0020than\u0020the\u0020node\n\u002D\u0020xor\u0020between\u0020triples\u0020of\u0020the\u0020DatasetNodeInterface\u0020with\u0020subject\u0020being\u0020the\u0020node\n\u0020\u0020and\u0020triples\u0020of\u0020the\u0020\u0024other\u0020with\u0020subject\u0020being\u0020the\u0020node",
+            "summary": "The\u0020resulting\u0020dataset\u0020should\u0020contain\u003A\n\u002D\u0020all\u0020quads\u0020of\u0020the\u0020DatasetNodeInterface\u0020with\u0020subject\u0020other\u0020than\u0020the\u0020node\n\u002D\u0020xor\u0020between\u0020triples\u0020of\u0020the\u0020DatasetNodeInterface\u0020with\u0020subject\u0020being\u0020the\u0020node\n\u0020\u0020and\u0020triples\u0020of\u0020the\u0020\u0024other\u0020with\u0020subject\u0020being\u0020the\u0020node",
             "url": "classes/rdfInterface-DatasetNodeInterface.html#method_xor"
         },                {
             "fqsen": "\\rdfInterface\\DatasetNodeInterface\u003A\u003Amap\u0028\u0029",
             "name": "map",
-            "summary": "Triples\u0020with\u0020subject\u0020other\u0020than\u0020DatasetNodeInterface\u0027s\u0020node\u0020should\u0020be\nreturned\u0020untouched.",
+            "summary": "Quads\u0020with\u0020subject\u0020other\u0020than\u0020DatasetNodeInterface\u0027s\u0020node\u0020should\u0020be\nreturned\u0020untouched.",
             "url": "classes/rdfInterface-DatasetNodeInterface.html#method_map"
         },                {
             "fqsen": "\\rdfInterface\\DefaultGraphInterface",
