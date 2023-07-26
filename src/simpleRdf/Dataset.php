@@ -45,15 +45,15 @@ use rdfInterface\DatasetInterface;
  */
 class Dataset implements DatasetInterface {
 
+    static public function factory(): Dataset {
+        return new Dataset();
+    }
+
     /**
      *
      * @var array<int, QuadInterface>
      */
     private array $quads = [];
-
-    public function __construct() {
-        
-    }
 
     public function __toString(): string {
         $ret = '';
