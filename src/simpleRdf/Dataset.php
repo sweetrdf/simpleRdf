@@ -29,6 +29,7 @@ namespace simpleRdf;
 use Generator;
 use Iterator;
 use OutOfBoundsException;
+use RuntimeException;
 use rdfHelpers\GenericTermIterator;
 use rdfHelpers\GenericQuadIterator;
 use rdfInterface\BlankNodeInterface;
@@ -83,7 +84,12 @@ class Dataset implements DatasetInterface {
         return $n === 0;
     }
 
-    public function add(QuadInterface | QuadIteratorInterface | QuadIteratorAggregateInterface $quads): void {
+    /**
+     * 
+     * @param QuadInterface|\Traversable<\rdfInterface\QuadInterface>|array<\rdfInterface\QuadInterface> $quads
+     * @return void
+     */
+    public function add(QuadInterface | \Traversable | array $quads): void {
         if ($quads instanceof QuadInterface) {
             $quads = [$quads];
         }
