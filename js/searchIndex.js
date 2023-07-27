@@ -171,6 +171,11 @@ Search.appendIndex(
             "summary": "Removes\u0020a\u0020quad\u0020matching\u0020the\u0020\u0024offset.",
             "url": "classes/simpleRdf-Dataset.html#method_offsetUnset"
         },                {
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003Aunset\u0028\u0029",
+            "name": "unset",
+            "summary": "",
+            "url": "classes/simpleRdf-Dataset.html#method_unset"
+        },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Amap\u0028\u0029",
             "name": "map",
             "summary": "",
@@ -236,10 +241,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/simpleRdf-Dataset.html#method_prepareMatchFunction"
         },                {
-            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AcheckIteratorEnd\u0028\u0029",
-            "name": "checkIteratorEnd",
+            "fqsen": "\\simpleRdf\\Dataset\u003A\u003AcheckIterator\u0028\u0029",
+            "name": "checkIterator",
             "summary": "",
-            "url": "classes/simpleRdf-Dataset.html#method_checkIteratorEnd"
+            "url": "classes/simpleRdf-Dataset.html#method_checkIterator"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003A\u0024quads",
             "name": "quads",
@@ -925,6 +930,11 @@ Search.appendIndex(
             "name": "CAST_DATATYPE",
             "summary": "",
             "url": "classes/rdfInterface-LiteralInterface.html#constant_CAST_DATATYPE"
+        },                {
+            "fqsen": "\\rdfInterface\\MultipleQuadsMatchedException",
+            "name": "MultipleQuadsMatchedException",
+            "summary": "Specialization\u0020of\u0020the\u0020\\UnexpectedValueException\u0020indicating\u0020multiple\u0020quads\nmatch\u0020while\u0020accessing\u0020a\u0020DatasetInterface\u0020object\u0020using\u0020the\u0020ArrayAccess\u0020syntax\n\u0028\u0024dataset\u005Boffset\u005D\u0029",
+            "url": "classes/rdfInterface-MultipleQuadsMatchedException.html"
         },                {
             "fqsen": "\\rdfInterface\\NamedNodeInterface",
             "name": "NamedNodeInterface",
