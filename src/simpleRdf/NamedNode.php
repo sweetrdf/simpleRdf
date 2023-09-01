@@ -43,7 +43,7 @@ class NamedNode implements NamedNodeInterface {
     }
 
     public function __toString(): string {
-        return '<' . $this->iri . '>';
+        return $this->iri;
     }
 
     public function getValue(): string {
