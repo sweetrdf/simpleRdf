@@ -35,6 +35,7 @@ use rdfInterface\LiteralInterface as iLiteral;
 use rdfInterface\DefaultGraphInterface as iDefaultGraph;
 use rdfInterface\QuadInterface as iQuad;
 use rdfHelpers\DefaultGraph;
+use rdfHelpers\QuadNoSubject;
 
 /**
  * Description of DataFactory
@@ -68,5 +69,12 @@ class DataFactory implements iDataFactory {
         iNamedNode | iBlankNode | iDefaultGraph | null $graphIri = null
     ): iQuad {
         return new Quad(clone $subject, clone $predicate, clone $object, $graphIri);
+    }
+
+    public static function quadNoSubject(
+        iNamedNode $predicate, iTerm $object,
+        iNamedNode | iBlankNode | iDefaultGraph | null $graphIri = null
+    ): QuadNoSubject {
+        return new QuadNoSubject(clone $predicate, clone $object, $graphIri);
     }
 }
