@@ -31,9 +31,7 @@ use rdfInterface\DataFactoryInterface as iDataFactory;
 use rdfInterface\TermInterface as iTerm;
 use rdfInterface\BlankNodeInterface as iBlankNode;
 use rdfInterface\NamedNodeInterface as iNamedNode;
-use rdfInterface\LiteralInterface as iLiteral;
 use rdfInterface\DefaultGraphInterface as iDefaultGraph;
-use rdfInterface\QuadInterface as iQuad;
 use rdfHelpers\DefaultGraph;
 use rdfHelpers\QuadNoSubject;
 
@@ -44,15 +42,15 @@ use rdfHelpers\QuadNoSubject;
  */
 class DataFactory implements iDataFactory {
 
-    public static function blankNode(string | Stringable | null $iri = null): iBlankNode {
+    public static function blankNode(string | Stringable | null $iri = null): BlankNode {
         return new BlankNode($iri);
     }
 
-    public static function namedNode(string | Stringable $iri): iNamedNode {
+    public static function namedNode(string | Stringable $iri): NamedNode {
         return new NamedNode($iri);
     }
 
-    public static function defaultGraph(): iDefaultGraph {
+    public static function defaultGraph(): DefaultGraph {
         return new DefaultGraph();
     }
 
@@ -60,14 +58,14 @@ class DataFactory implements iDataFactory {
         int | float | string | bool | Stringable $value,
         string | Stringable | null $lang = null,
         string | Stringable | null $datatype = null
-    ): iLiteral {
+    ): Literal {
         return new Literal($value, $lang, $datatype);
     }
 
     public static function quad(
         iTerm $subject, iNamedNode $predicate, iTerm $object,
         iNamedNode | iBlankNode | iDefaultGraph | null $graphIri = null
-    ): iQuad {
+    ): Quad {
         return new Quad(clone $subject, clone $predicate, clone $object, $graphIri);
     }
 
