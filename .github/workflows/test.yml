@@ -21,6 +21,8 @@ jobs:
         export COVERALLS_RUN_LOCALLY=1
         export COVERALLS_REPO_TOKEN=${{ secrets.coverallsToken }}
         composer require php-coveralls/php-coveralls
+        php vendor/bin/php-coveralls -v
+        git reset --hard HEAD
     - name: document
       run: |
         docker run --rm -v $(pwd):/data phpdoc/phpdoc:3 --directory=src --directory=vendor/sweetrdf/rdf-interface/src --directory=vendor/sweetrdf/rdf-helpers/src/ --target=docs
@@ -31,7 +33,6 @@ jobs:
         git config user.name "Github Actions Workflow"
         git add * || true
         git commit -a -m 'Automatic documentation generation' && git push origin docs || true
-        php vendor/bin/php-coveralls -v
   phpstan:
     runs-on: ubuntu-latest
     steps:
