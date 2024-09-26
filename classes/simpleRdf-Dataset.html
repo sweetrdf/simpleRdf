@@ -54,7 +54,7 @@
     Menu
 </label>
 <aside class="phpdocumentor-column -three phpdocumentor-sidebar">
-                    <section class="phpdocumentor-sidebar__category">
+                    <section class="phpdocumentor-sidebar__category -namespaces">
             <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="namespaces/simplerdf.html" class="">simpleRdf</a>
@@ -69,7 +69,7 @@
 </h4>
 
                         </section>
-                <section class="phpdocumentor-sidebar__category">
+                <section class="phpdocumentor-sidebar__category -packages">
             <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/Application.html" class="">Application</a>
@@ -77,14 +77,14 @@
 
                         </section>
             
-    <section class="phpdocumentor-sidebar__category">
+    <section class="phpdocumentor-sidebar__category -reports">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
                 <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
         <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
         <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
     </section>
 
-    <section class="phpdocumentor-sidebar__category">
+    <section class="phpdocumentor-sidebar__category -indices">
         <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
         <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
     </section>
@@ -113,7 +113,7 @@
                             <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>                    </span>
     
             <span class="phpdocumentor-element__extends">
-            Uses
+            uses
                             <a href="classes/rdfHelpers-DatasetGettersTrait.html"><abbr title="\rdfHelpers\DatasetGettersTrait">DatasetGettersTrait</abbr></a>                    </span>
     </h2>
 
@@ -133,6 +133,7 @@
 
 
 
+
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
         <a href="classes/simpleRdf-Dataset.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
@@ -149,6 +150,8 @@
 
                                     </dd>
                                             </dl>
+
+
 
 
 
@@ -180,7 +183,7 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/simpleRdf-Dataset.html#property_quads">$quads</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#property_quads">$quads</a>
     <span>
                         &nbsp;: array&lt;int, <a href="classes/rdfInterface-QuadInterface.html"><abbr title="\rdfInterface\QuadInterface">QuadInterface</abbr></a>&gt;            </span>
 </dt>
@@ -194,177 +197,182 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method___toString">__toString()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method___toString">__toString()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_add">add()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_add">add()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd>Adds quad(s) to the dataset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_any">any()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_any">any()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Checks if any quad in the dataset matches a given filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_copy">copy()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_copy">copy()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>    </span>
 </dt>
 <dd>Creates a copy of the dataset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_copyExcept">copyExcept()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_copyExcept">copyExcept()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>    </span>
 </dt>
 <dd>Creates a copy of the dataset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_count">count()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_count">count()</a>
     <span>
                                 &nbsp;: int    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_delete">delete()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_delete">delete()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>    </span>
 </dt>
 <dd>In-place removes quads from the dataset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_deleteExcept">deleteExcept()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_deleteExcept">deleteExcept()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>    </span>
 </dt>
 <dd>In-place removes quads from the dataset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_equals">equals()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_equals">equals()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_every">every()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_every">every()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Checks if all quads in the dataset match a given filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_factory">factory()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_factory">factory()</a>
     <span>
                                 &nbsp;: <a href="classes/simpleRdf-Dataset.html"><abbr title="\simpleRdf\Dataset">Dataset</abbr></a>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_forEach">forEach()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_forEach">forEach()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd>In-place modifies all dataset quads using a given callback.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getGraph">getGraph()</a>
+    <a class="" href="classes/rdfHelpers-DatasetGettersTrait.html#method_getGraph">getGraph()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null    </span>
 </dt>
 <dd>Fetches graph of a first quad matching a given filter or null if no quad matches the filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getGraphValue">getGraphValue()</a>
+    <a class="" href="classes/rdfHelpers-DatasetGettersTrait.html#method_getGraphValue">getGraphValue()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Returns result of calling the getValue() method on a subject of a first quad matching a given filter or null if no quad matches the filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_getIterator">getIterator()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_getIterator">getIterator()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfHelpers-GenericQuadIterator.html"><abbr title="\rdfHelpers\GenericQuadIterator">GenericQuadIterator</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>    </span>
 </dt>
+<dd>Returns QuadIteratorInterface iterating over dataset&#039;s quads.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getObject">getObject()</a>
+    <a class="" href="classes/rdfHelpers-DatasetGettersTrait.html#method_getObject">getObject()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null    </span>
 </dt>
 <dd>Fetches object of a first quad matching a given filter or null if no quad matches the filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getObjectValue">getObjectValue()</a>
+    <a class="" href="classes/rdfHelpers-DatasetGettersTrait.html#method_getObjectValue">getObjectValue()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Returns result of calling the getValue() method on a subject of a first quad matching a given filter or null if no quad matches the filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getPredicate">getPredicate()</a>
+    <a class="" href="classes/rdfHelpers-DatasetGettersTrait.html#method_getPredicate">getPredicate()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null    </span>
 </dt>
 <dd>Fetches subject of a first quad matching a given filter or null if no quad matches the filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getPredicateValue">getPredicateValue()</a>
+    <a class="" href="classes/rdfHelpers-DatasetGettersTrait.html#method_getPredicateValue">getPredicateValue()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Returns result of calling the getValue() method on a subject of a first quad matching a given filter or null if no quad matches the filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getSubject">getSubject()</a>
+    <a class="" href="classes/rdfHelpers-DatasetGettersTrait.html#method_getSubject">getSubject()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null    </span>
 </dt>
 <dd>Fetches subject of a first quad matching a given filter or null if no quad matches the filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getSubjectValue">getSubjectValue()</a>
+    <a class="" href="classes/rdfHelpers-DatasetGettersTrait.html#method_getSubjectValue">getSubjectValue()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Returns result of calling the getValue() method on a subject of a first quad matching a given filter or null if no quad matches the filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listGraphs">listGraphs()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_listGraphs">listGraphs()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a>    </span>
 </dt>
-<dd>Fetches an iterator over unique set of dataset quad graphs.</dd>
+<dd>Fetches an iterator over unique set of dataset quad graphs optionally
+matching a given filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listObjects">listObjects()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_listObjects">listObjects()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a>    </span>
 </dt>
-<dd>Fetches an iterator over unique set of dataset quad objects.</dd>
+<dd>Fetches an iterator over unique set of dataset quad objects optionally
+matching a given filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listPredicates">listPredicates()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_listPredicates">listPredicates()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a>    </span>
 </dt>
-<dd>Fetches an iterator over unique set of dataset quad predicates.</dd>
+<dd>Fetches an iterator over unique set of dataset quad predicates optionally
+matching a given filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listSubjects">listSubjects()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_listSubjects">listSubjects()</a>
     <span>
-                                &nbsp;: <a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a>    </span>
+                                &nbsp;: <a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a>    </span>
 </dt>
-<dd>Fetches an iterator over unique set of dataset quad subjects.</dd>
+<dd>Fetches an iterator over unique set of dataset quad subjects optionally
+matching a given filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_map">map()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_map">map()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>    </span>
 </dt>
@@ -372,56 +380,56 @@
 callback function.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_none">none()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_none">none()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Checks if no quad in the dataset matches a given filter.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_offsetExists">offsetExists()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_offsetExists">offsetExists()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Checks if a given offset exists.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_offsetGet">offsetGet()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_offsetGet">offsetGet()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-QuadInterface.html"><abbr title="\rdfInterface\QuadInterface">QuadInterface</abbr></a>    </span>
 </dt>
 <dd>Returns a quad matching the $offset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_offsetSet">offsetSet()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_offsetSet">offsetSet()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd>Assigns a new value to the quad matching the $offset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_offsetUnset">offsetUnset()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_offsetUnset">offsetUnset()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd>Removes a quad matching the $offset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_reduce">reduce()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_reduce">reduce()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Performs a reduce operation on the dataset quads.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_union">union()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_union">union()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>    </span>
 </dt>
 <dd>Returns a new dataset being a union of the current one and the $other one.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/simpleRdf-Dataset.html#method_xor">xor()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_xor">xor()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-DatasetInterface.html"><abbr title="\rdfInterface\DatasetInterface">DatasetInterface</abbr></a>    </span>
 </dt>
@@ -429,55 +437,55 @@ callback function.</dd>
 the $other one.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/simpleRdf-Dataset.html#method_checkIterator">checkIterator()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_checkIterator">checkIterator()</a>
     <span>
                                 &nbsp;: int|null    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/simpleRdf-Dataset.html#method_exists">exists()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_exists">exists()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/simpleRdf-Dataset.html#method_findMatchingQuads">findMatchingQuads()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_findMatchingQuads">findMatchingQuads()</a>
     <span>
                                 &nbsp;: <abbr title="\Generator">Generator</abbr>&lt;string|int, int&gt;    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/simpleRdf-Dataset.html#method_findNotMatchingQuads">findNotMatchingQuads()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_findNotMatchingQuads">findNotMatchingQuads()</a>
     <span>
                                 &nbsp;: <abbr title="\Generator">Generator</abbr>&lt;string|int, int&gt;    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/simpleRdf-Dataset.html#method_get">get()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_get">get()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfInterface-QuadInterface.html"><abbr title="\rdfInterface\QuadInterface">QuadInterface</abbr></a>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/simpleRdf-Dataset.html#method_listQuadElement">listQuadElement()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_listQuadElement">listQuadElement()</a>
     <span>
                                 &nbsp;: <a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/simpleRdf-Dataset.html#method_prepareMatchFunction">prepareMatchFunction()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_prepareMatchFunction">prepareMatchFunction()</a>
     <span>
                                 &nbsp;: callable    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/simpleRdf-Dataset.html#method_set">set()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_set">set()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a href="classes/simpleRdf-Dataset.html#method_unset">unset()</a>
+    <a class="" href="classes/simpleRdf-Dataset.html#method_unset">unset()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
@@ -485,9 +493,6 @@ the $other one.</dd>
     </dl>
 
 
-
-
-        
 
         
 
@@ -520,6 +525,7 @@ the $other one.</dd>
     </aside>
 
     
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">array&lt;int, <a href="classes/rdfInterface-QuadInterface.html"><abbr title="\rdfInterface\QuadInterface">QuadInterface</abbr></a>&gt;</span>
@@ -528,6 +534,8 @@ the $other one.</dd>
 
     
     
+    
+
     
 
 </article>
@@ -567,6 +575,9 @@ the $other one.</dd>
     
     
     
+    
+
+    
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
@@ -601,6 +612,7 @@ the $other one.</dd>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -611,6 +623,8 @@ the $other one.</dd>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -643,6 +657,7 @@ the $other one.</dd>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -653,6 +668,8 @@ the $other one.</dd>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -688,6 +705,7 @@ the $other one.</dd>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
         <section class="phpdocumentor-description"><p>If $filter is provided, the copy contains only quads matching the $filter.</p>
 <p>The $filter can be specified as:</p>
 <ul>
@@ -711,6 +729,8 @@ All quads for which the callable returns true are copied.</li>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -746,6 +766,7 @@ All quads for which the callable returns true are copied.</li>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
         <section class="phpdocumentor-description"><p>If $filter is provided, the copy contains only quads not matching the
 The $filter.</p>
 <p>The $filter can be specified as:</p>
@@ -770,6 +791,8 @@ All quads for which the callable returns true are copied.</li>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -807,6 +830,9 @@ All quads for which the callable returns true are copied.</li>
     
     
     
+    
+
+    
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
@@ -840,6 +866,7 @@ All quads for which the callable returns true are copied.</li>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
         <section class="phpdocumentor-description"><p>All quads matching the $filter parameter are removed.</p>
 <p>The $filter can be specified as:</p>
 <ul>
@@ -863,6 +890,8 @@ All quads for which the callable returns true are copied.</li>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -902,6 +931,7 @@ All quads for which the callable returns true are copied.</li>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
         <section class="phpdocumentor-description"><p>All quads but ones matching the $filter parameter are removed.</p>
 <p>The $filter can be specified as:</p>
 <ul>
@@ -925,6 +955,8 @@ All quads for which the callable returns true are copied.</li>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -964,6 +996,7 @@ All quads for which the callable returns true are copied.</li>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -974,6 +1007,8 @@ All quads for which the callable returns true are copied.</li>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1010,6 +1045,7 @@ All quads for which the callable returns true are copied.</li>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1020,6 +1056,8 @@ All quads for which the callable returns true are copied.</li>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1057,6 +1095,9 @@ All quads for which the callable returns true are copied.</li>
     
     
     
+    
+
+    
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
@@ -1086,10 +1127,11 @@ All quads for which the callable returns true are copied.</li>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">forEach</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">forEach</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fn</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
         <section class="phpdocumentor-description"><p>All quads matching the $filter parameter are modified.</p>
 <p>The $filter can be specified as:</p>
 <ul>
@@ -1119,12 +1161,14 @@ modyfying a single quad</p>
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$filter</span>
-                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null</span>
                  = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1152,10 +1196,11 @@ modyfying a single quad</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getGraph</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">getGraph</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1170,13 +1215,11 @@ modyfying a single quad</p>
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>| null</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null</span>
             </section>
 
 </article>
@@ -1207,6 +1250,7 @@ modyfying a single quad</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1217,6 +1261,8 @@ modyfying a single quad</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1240,14 +1286,28 @@ modyfying a single quad</p>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Returns QuadIteratorInterface iterating over dataset&#039;s quads.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getIterator</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericQuadIterator.html"><abbr title="\rdfHelpers\GenericQuadIterator">GenericQuadIterator</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">getIterator</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
+        <section class="phpdocumentor-description"><p>If $filter is provided, the iterator includes only quads matching the
+filter.</p>
+<p>$filter can be specified as:</p>
+<ul>
+<li>An object implementing the \rdfInterface\QuadCompareInterface
+(e.g. a single Quad)</li>
+<li>An object implementing the \rdfInterface\QuadIteratorInterface
+(e.g. another Dataset)</li>
+<li>A callable with signature <code class="prettyprint">fn(\rdfInterface\QuadInterface, \rdfInterface\DatasetInterface): bool</code>
+All quads for which the callable returns true are copied.</li>
+</ul>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1261,9 +1321,11 @@ modyfying a single quad</p>
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericQuadIterator.html"><abbr title="\rdfHelpers\GenericQuadIterator">GenericQuadIterator</abbr></a></span>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a></span>
             </section>
 
 </article>
@@ -1289,10 +1351,11 @@ modyfying a single quad</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getObject</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">getObject</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1307,13 +1370,11 @@ modyfying a single quad</p>
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>| null</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null</span>
             </section>
 
 </article>
@@ -1344,6 +1405,7 @@ modyfying a single quad</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1354,6 +1416,8 @@ modyfying a single quad</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1381,10 +1445,11 @@ modyfying a single quad</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getPredicate</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">getPredicate</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1399,13 +1464,11 @@ modyfying a single quad</p>
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>| null</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null</span>
             </section>
 
 </article>
@@ -1436,6 +1499,7 @@ modyfying a single quad</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1446,6 +1510,8 @@ modyfying a single quad</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1473,10 +1539,11 @@ modyfying a single quad</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getSubject</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">getSubject</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1491,13 +1558,11 @@ modyfying a single quad</p>
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>| null</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermInterface.html"><abbr title="\rdfInterface\TermInterface">TermInterface</abbr></a>|null</span>
             </section>
 
 </article>
@@ -1528,6 +1593,7 @@ modyfying a single quad</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1542,33 +1608,37 @@ modyfying a single quad</p>
     
 
     
+
+    
 </article>
                     <article
         class="phpdocumentor-element
             -method
             -public
-                        -abstract                                "
+                                                        "
 >
     <h4 class="phpdocumentor-element__name" id="method_listGraphs">
         listGraphs()
-        <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listGraphs" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/simpleRdf-Dataset.html#method_listGraphs" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-helpers/src/rdfHelpers/DatasetGettersTrait.php"><a href="files/vendor-sweetrdf-rdf-helpers-src-rdfhelpers-datasetgetterstrait.html"><abbr title="vendor/sweetrdf/rdf-helpers/src/rdfHelpers/DatasetGettersTrait.php">DatasetGettersTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">71</span>
+    <span class="phpdocumentor-element-found-in__line">339</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Fetches an iterator over unique set of dataset quad graphs.</p>
+        <p class="phpdocumentor-summary">Fetches an iterator over unique set of dataset quad graphs optionally
+matching a given filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__abstract">abstract</span>                <span class="phpdocumentor-signature__name">listGraphs</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">listGraphs</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1583,9 +1653,11 @@ modyfying a single quad</p>
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a></span>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a></span>
             </section>
 
 </article>
@@ -1593,28 +1665,30 @@ modyfying a single quad</p>
         class="phpdocumentor-element
             -method
             -public
-                        -abstract                                "
+                                                        "
 >
     <h4 class="phpdocumentor-element__name" id="method_listObjects">
         listObjects()
-        <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listObjects" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/simpleRdf-Dataset.html#method_listObjects" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-helpers/src/rdfHelpers/DatasetGettersTrait.php"><a href="files/vendor-sweetrdf-rdf-helpers-src-rdfhelpers-datasetgetterstrait.html"><abbr title="vendor/sweetrdf/rdf-helpers/src/rdfHelpers/DatasetGettersTrait.php">DatasetGettersTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">330</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Fetches an iterator over unique set of dataset quad objects.</p>
+        <p class="phpdocumentor-summary">Fetches an iterator over unique set of dataset quad objects optionally
+matching a given filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__abstract">abstract</span>                <span class="phpdocumentor-signature__name">listObjects</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">listObjects</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1629,9 +1703,11 @@ modyfying a single quad</p>
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a></span>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a></span>
             </section>
 
 </article>
@@ -1639,28 +1715,30 @@ modyfying a single quad</p>
         class="phpdocumentor-element
             -method
             -public
-                        -abstract                                "
+                                                        "
 >
     <h4 class="phpdocumentor-element__name" id="method_listPredicates">
         listPredicates()
-        <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listPredicates" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/simpleRdf-Dataset.html#method_listPredicates" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-helpers/src/rdfHelpers/DatasetGettersTrait.php"><a href="files/vendor-sweetrdf-rdf-helpers-src-rdfhelpers-datasetgetterstrait.html"><abbr title="vendor/sweetrdf/rdf-helpers/src/rdfHelpers/DatasetGettersTrait.php">DatasetGettersTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">55</span>
+    <span class="phpdocumentor-element-found-in__line">321</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Fetches an iterator over unique set of dataset quad predicates.</p>
+        <p class="phpdocumentor-summary">Fetches an iterator over unique set of dataset quad predicates optionally
+matching a given filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__abstract">abstract</span>                <span class="phpdocumentor-signature__name">listPredicates</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">listPredicates</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1675,9 +1753,11 @@ modyfying a single quad</p>
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a></span>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a></span>
             </section>
 
 </article>
@@ -1685,28 +1765,30 @@ modyfying a single quad</p>
         class="phpdocumentor-element
             -method
             -public
-                        -abstract                                "
+                                                        "
 >
     <h4 class="phpdocumentor-element__name" id="method_listSubjects">
         listSubjects()
-        <a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listSubjects" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/simpleRdf-Dataset.html#method_listSubjects" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="vendor/sweetrdf/rdf-helpers/src/rdfHelpers/DatasetGettersTrait.php"><a href="files/vendor-sweetrdf-rdf-helpers-src-rdfhelpers-datasetgetterstrait.html"><abbr title="vendor/sweetrdf/rdf-helpers/src/rdfHelpers/DatasetGettersTrait.php">DatasetGettersTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/simpleRdf/Dataset.php"><a href="files/src-simplerdf-dataset.html"><abbr title="src/simpleRdf/Dataset.php">Dataset.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">47</span>
+    <span class="phpdocumentor-element-found-in__line">312</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Fetches an iterator over unique set of dataset quad subjects.</p>
+        <p class="phpdocumentor-summary">Fetches an iterator over unique set of dataset quad subjects optionally
+matching a given filter.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__abstract">abstract</span>                <span class="phpdocumentor-signature__name">listSubjects</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a></span></code>
+                    <span class="phpdocumentor-signature__name">listSubjects</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/rdfInterface-QuadCompareInterface.html"><abbr title="\rdfInterface\QuadCompareInterface">QuadCompareInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorInterface.html"><abbr title="\rdfInterface\QuadIteratorInterface">QuadIteratorInterface</abbr></a>|<a href="classes/rdfInterface-QuadIteratorAggregateInterface.html"><abbr title="\rdfInterface\QuadIteratorAggregateInterface">QuadIteratorAggregateInterface</abbr></a>|callable|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filter</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1721,9 +1803,11 @@ modyfying a single quad</p>
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-TermIteratorInterface.html"><abbr title="\rdfInterface\TermIteratorInterface">TermIteratorInterface</abbr></a></span>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/rdfHelpers-GenericTermIterator.html"><abbr title="\rdfHelpers\GenericTermIterator">GenericTermIterator</abbr></a></span>
             </section>
 
 </article>
@@ -1755,6 +1839,7 @@ callback function.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1774,6 +1859,8 @@ callback function.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1810,6 +1897,7 @@ callback function.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1820,6 +1908,8 @@ callback function.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1855,6 +1945,7 @@ callback function.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1892,6 +1983,8 @@ callback function.</p>
                                     </dd>
                                             </dl>
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">bool</span>
@@ -1924,6 +2017,7 @@ callback function.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1961,6 +2055,8 @@ callback function.</p>
                                     </dd>
                                             </dl>
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><a href="classes/rdfInterface-QuadInterface.html"><abbr title="\rdfInterface\QuadInterface">QuadInterface</abbr></a></span>
@@ -1993,6 +2089,7 @@ callback function.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2038,6 +2135,8 @@ callback function.</p>
                                             </dl>
 
     
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -2065,6 +2164,7 @@ callback function.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2103,6 +2203,8 @@ callback function.</p>
                                             </dl>
 
     
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -2130,6 +2232,7 @@ callback function.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
         <section class="phpdocumentor-description"><p>The reduce operation consist of calling a given callback function on all
 matching quads. The first call is made with the $initialValue passed as
 the callback's $prevValue. Following calls pass previous callback's call
@@ -2168,6 +2271,8 @@ the last callback function call is the return value of the reduce() method.</p>
     
 
     
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -2195,6 +2300,7 @@ the last callback function call is the return value of the reduce() method.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
         <section class="phpdocumentor-description"><p>For a in-place union use add().</p>
 </section>
 
@@ -2208,6 +2314,8 @@ the last callback function call is the return value of the reduce() method.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -2244,6 +2352,7 @@ the $other one.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
         <section class="phpdocumentor-description"><p>There is no in-place equivalent.</p>
 </section>
 
@@ -2257,6 +2366,8 @@ the $other one.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -2291,6 +2402,7 @@ the $other one.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -2335,6 +2447,8 @@ the $other one.</p>
                                     </dd>
                                             </dl>
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">int|null</span>
@@ -2367,6 +2481,7 @@ the $other one.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2377,6 +2492,8 @@ the $other one.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -2412,6 +2529,7 @@ the $other one.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2439,6 +2557,8 @@ the $other one.</p>
                                              
                                     </dd>
                                             </dl>
+
+    
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
@@ -2472,6 +2592,7 @@ the $other one.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2482,6 +2603,8 @@ the $other one.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -2517,6 +2640,7 @@ the $other one.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2527,6 +2651,8 @@ the $other one.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -2562,6 +2688,7 @@ the $other one.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2579,6 +2706,8 @@ the $other one.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -2614,6 +2743,7 @@ the $other one.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2624,6 +2754,8 @@ the $other one.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -2659,6 +2791,7 @@ the $other one.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2676,6 +2809,8 @@ the $other one.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -2707,6 +2842,7 @@ the $other one.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2717,6 +2853,8 @@ the $other one.</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -2835,56 +2973,56 @@ the $other one.</p>
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/simpleRdf-Dataset.html#property_quads">$quads<a href="classes/simpleRdf-Dataset.html"></li>
+                                                    <li class=""><a href="classes/simpleRdf-Dataset.html#property_quads">$quads</a></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/simpleRdf-Dataset.html#method___toString">__toString()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_add">add()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_any">any()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_copy">copy()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_copyExcept">copyExcept()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_count">count()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_delete">delete()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_deleteExcept">deleteExcept()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_equals">equals()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_every">every()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_factory">factory()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_forEach">forEach()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getGraph">getGraph()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getGraphValue">getGraphValue()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_getIterator">getIterator()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getObject">getObject()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getObjectValue">getObjectValue()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getPredicate">getPredicate()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getPredicateValue">getPredicateValue()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getSubject">getSubject()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getSubjectValue">getSubjectValue()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listGraphs">listGraphs()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listObjects">listObjects()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listPredicates">listPredicates()</a></li>
-                                            <li><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_listSubjects">listSubjects()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_map">map()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_none">none()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_offsetExists">offsetExists()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_offsetGet">offsetGet()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_offsetSet">offsetSet()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_offsetUnset">offsetUnset()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_reduce">reduce()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_union">union()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_xor">xor()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_checkIterator">checkIterator()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_exists">exists()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_findMatchingQuads">findMatchingQuads()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_findNotMatchingQuads">findNotMatchingQuads()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_get">get()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_listQuadElement">listQuadElement()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_prepareMatchFunction">prepareMatchFunction()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_set">set()</a></li>
-                                            <li><a href="classes/simpleRdf-Dataset.html#method_unset">unset()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method___toString">__toString()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_add">add()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_any">any()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_copy">copy()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_copyExcept">copyExcept()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_count">count()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_delete">delete()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_deleteExcept">deleteExcept()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_equals">equals()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_every">every()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_factory">factory()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_forEach">forEach()</a></li>
+                                            <li class=""><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getGraph">getGraph()</a></li>
+                                            <li class=""><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getGraphValue">getGraphValue()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_getIterator">getIterator()</a></li>
+                                            <li class=""><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getObject">getObject()</a></li>
+                                            <li class=""><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getObjectValue">getObjectValue()</a></li>
+                                            <li class=""><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getPredicate">getPredicate()</a></li>
+                                            <li class=""><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getPredicateValue">getPredicateValue()</a></li>
+                                            <li class=""><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getSubject">getSubject()</a></li>
+                                            <li class=""><a href="classes/rdfHelpers-DatasetGettersTrait.html#method_getSubjectValue">getSubjectValue()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_listGraphs">listGraphs()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_listObjects">listObjects()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_listPredicates">listPredicates()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_listSubjects">listSubjects()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_map">map()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_none">none()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_offsetExists">offsetExists()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_offsetGet">offsetGet()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_offsetSet">offsetSet()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_offsetUnset">offsetUnset()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_reduce">reduce()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_union">union()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_xor">xor()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_checkIterator">checkIterator()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_exists">exists()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_findMatchingQuads">findMatchingQuads()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_findNotMatchingQuads">findNotMatchingQuads()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_get">get()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_listQuadElement">listQuadElement()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_prepareMatchFunction">prepareMatchFunction()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_set">set()</a></li>
+                                            <li class=""><a href="classes/simpleRdf-Dataset.html#method_unset">unset()</a></li>
                                     </ul>
             </li>
                     </ul>

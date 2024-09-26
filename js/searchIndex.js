@@ -13,7 +13,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\simpleRdf\\BlankNode\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
-            "summary": "",
+            "summary": "Should\u0020return\u003A",
             "url": "classes/simpleRdf-BlankNode.html#method___toString"
         },                {
             "fqsen": "\\simpleRdf\\BlankNode\u003A\u003Aequals\u0028\u0029",
@@ -133,7 +133,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003AgetIterator\u0028\u0029",
             "name": "getIterator",
-            "summary": "",
+            "summary": "Returns\u0020QuadIteratorInterface\u0020iterating\u0020over\u0020dataset\u0027s\u0020quads.",
             "url": "classes/simpleRdf-Dataset.html#method_getIterator"
         },                {
             "fqsen": "\\simpleRdf\\Dataset\u003A\u003Acount\u0028\u0029",
@@ -268,7 +268,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\simpleRdf\\Literal\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
-            "summary": "",
+            "summary": "Should\u0020return\u003A",
             "url": "classes/simpleRdf-Literal.html#method___toString"
         },                {
             "fqsen": "\\simpleRdf\\Literal\u003A\u003AgetValue\u0028\u0029",
@@ -333,7 +333,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\simpleRdf\\NamedNode\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
-            "summary": "",
+            "summary": "Should\u0020return\u003A",
             "url": "classes/simpleRdf-NamedNode.html#method___toString"
         },                {
             "fqsen": "\\simpleRdf\\NamedNode\u003A\u003AgetValue\u0028\u0029",
@@ -363,7 +363,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\simpleRdf\\Quad\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
-            "summary": "",
+            "summary": "Should\u0020return\u003A",
             "url": "classes/simpleRdf-Quad.html#method___toString"
         },                {
             "fqsen": "\\simpleRdf\\Quad\u003A\u003Aequals\u0028\u0029",
@@ -528,7 +528,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\rdfHelpers\\DefaultGraph\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
-            "summary": "",
+            "summary": "Should\u0020return\u003A",
             "url": "classes/rdfHelpers-DefaultGraph.html#method___toString"
         },                {
             "fqsen": "\\rdfHelpers\\DefaultGraph\u003A\u003AgetValue\u0028\u0029",
