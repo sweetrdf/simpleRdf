@@ -157,7 +157,7 @@ class Dataset implements DatasetInterface {
     }
 
     public function forEach(callable $fn,
-                            QuadCompareInterface | QuadIteratorInterface | QuadIteratorAggregateInterface | callable $filter = null): void {
+                            QuadCompareInterface | QuadIteratorInterface | QuadIteratorAggregateInterface | callable | null $filter = null): void {
         $idx = iterator_to_array($this->findMatchingQuads($filter)); // we need a copy as $this->quads will be modified in-place
         foreach ($idx as $i) {
             $val = $fn($this->quads[$i], $this);
