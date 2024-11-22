@@ -138,7 +138,7 @@ class Dataset implements DatasetInterface {
         return $ret;
     }
 
-    public function delete(QuadCompareInterface | QuadIteratorInterface | QuadIteratorAggregateInterface | callable $filter): Dataset {
+    public function delete(QuadCompareInterface | QuadIteratorInterface | QuadIteratorAggregateInterface | callable | null $filter = null): Dataset {
         $deleted = new Dataset();
         foreach ($this->findMatchingQuads($filter) as $i) {
             $deleted->add($this->quads[$i]);
