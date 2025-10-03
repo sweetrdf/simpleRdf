@@ -272,7 +272,7 @@ class Dataset implements DatasetInterface {
     }
 
     public function map(callable $fn,
-                        QuadCompareInterface | QuadIteratorInterface | QuadIteratorAggregateInterface | callable $filter = null): Dataset {
+                        QuadCompareInterface | QuadIteratorInterface | QuadIteratorAggregateInterface | callable $filter | null = null): Dataset {
         $ret = new Dataset();
         $idx = $this->findMatchingQuads($filter);
         foreach ($idx as $i) {
@@ -282,7 +282,7 @@ class Dataset implements DatasetInterface {
     }
 
     public function reduce(callable $fn, $initialValue = null,
-                           QuadCompareInterface | QuadIteratorInterface | QuadIteratorAggregateInterface | callable $filter = null): mixed {
+                           QuadCompareInterface | QuadIteratorInterface | QuadIteratorAggregateInterface | callable $filter | null = null): mixed {
         $idx = $this->findMatchingQuads($filter);
         foreach ($idx as $i) {
             $initialValue = $fn($initialValue, $this->quads[$i], $this);
