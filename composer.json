@@ -29,7 +29,7 @@
     "require-dev": {
         "phpunit/phpunit": "^10",
         "phpstan/phpstan": "^1",
-        "sweetrdf/rdf-interface-tests": "2.0.0",
+        "sweetrdf/rdf-interface-tests": "3.0.0",
         "sweetrdf/term-templates": "^2"
     },
     "autoload-dev": {
